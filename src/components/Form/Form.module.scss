@@ -1,0 +1,539 @@
+.Form {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+}
+
+.block {
+    display: flex;
+    width: 100%;
+    height: 612px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px 30px 30px 30px;
+}
+
+.Hear {
+    background: url(../../assets/form.jpg) no-repeat;
+
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    gap: 16px;
+    padding: 60px 50px 30px;
+    border-radius: 30px 0px 0px 30px;
+
+    h1 {
+        width: 480px;
+        color: #fff;
+        font-family: Krona One;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        text-transform: uppercase;
+    }
+
+    p {
+        width: 430px;
+        justify-content: flex-end;
+        color: #81809F;
+        font-family: Inter;
+        font-size: 22px;
+        line-height: 140%;
+    }
+}
+
+.FormBlock {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 50px;
+    gap: 39px;
+    border-radius: 0px 30px 30px 0px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(84, 86, 114, 0.05) 100%);
+    backdrop-filter: blur(30.251544952392578px);
+
+    h2 {
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 64px;
+        margin-bottom: 4px;
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.70);
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 140%;
+    }
+
+    .inputs {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    input {
+        padding: 22px 26px 20px 26px;
+        max-width: 246px;
+        margin-bottom: 30px;
+        height: 24px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        color: #AAA7CF;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    textarea {
+        display: flex;
+        height: 103px;
+        width: 100%;
+        padding: 26px 14px 14px 26px;
+        max-width: 545px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        color: #AAA7CF;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 0;
+    }
+
+    input::-webkit-input-placeholder {
+        color: #AAA7CF;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    textarea::-webkit-input-placeholder {
+        color: #AAA7CF;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    input::-moz-placeholder {
+        color: #AAA7CF;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    textarea::-moz-placeholder {
+        color: #AAA7CF;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    button {
+        padding: 24px 27px;
+        border: 1px solid #7251B9;
+        border-radius: 72px;
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 18.297px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .Message {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    .MessageText {
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+        align-items: center;
+        a{
+            color: #7251B9;
+        }
+    }
+
+    .messageStar {
+        align-self: center;
+        color: #7251B9;
+        width: 21px;
+        height: 42px;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+@media (max-width: 1024px) and (min-width: 800px) {
+    .Hear {
+        padding: 47.333px 39.444px;
+        height: 746px;
+        width: 45%;
+        background: url(../../assets/HearTablet.jpg) no-repeat;
+
+        h1 {
+            max-width: 325.077px;
+            font-size: 44.309px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            /* 53.17px */
+        }
+
+        p {
+            max-width: 325.077px;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 400;
+        }
+    }
+
+    .FormBlock {
+        width: 55%;
+        height: 746px;
+        padding: 47.333px 39.444px;
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+
+        }
+
+        .inputs {
+            flex-direction: column;
+            width: 100%;
+            gap: 18px;
+        }
+
+        input {
+            box-sizing: inherit;
+            padding: 17.356px 20.511px 15.778px 20.511px;
+            width: 100%;
+            min-height: 20px;
+            height: auto;
+            margin-bottom: 0;
+            max-width: 500px;
+            border-radius: 7.889px;
+        }
+
+        textarea {
+            box-sizing: inherit;
+            margin-top: 23px;
+            height: 139px;
+            width: 100%;
+            padding: 20px 11px 11px 20px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        input::-webkit-input-placeholder {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        textarea::-webkit-input-placeholder {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        input::-moz-placeholder {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        textarea::-moz-placeholder {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        .Message {
+            flex-direction: column;
+            margin-top: 31px;
+        }
+
+        .MessageText {
+            font-size: 15px;
+            line-height: 16.567px;
+            gap: 4px;
+        }
+
+        .messageStar {
+            font-size: 31.556px;
+            line-height: normal;
+        }
+
+        button {
+            margin-top: 24px;
+            font-size: 15px;
+            text-align: center;
+            color: #FFF;
+            border: 1.42px solid #FFF;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .Form {
+        max-width: 500px;
+        flex-direction: column;
+    }
+
+    .block {
+        flex-direction: column;
+        height: 1015px;
+        justify-content: start;
+    }
+
+    .Hear {
+        width: 100%;
+        height: 329px;
+        padding: 44px 24px;
+        border-radius: 30px 30px 0px 0px;
+        gap: 0px;
+
+        h1 {
+            width: 100%;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+        }
+
+        p {
+            color: #FFF;
+            width: 100%;
+            font-size: 17px;
+            line-height: 145%;
+        }
+    }
+
+    .FormBlock {
+        width: 100%;
+        height: 686px;
+        padding: 47px 39px;
+        border-radius: 0px 0px 30px 30px;
+        gap: 31px;
+
+        h2 {
+            font-size: 33.133px;
+            line-height: 50.489px;
+        }
+
+        p {
+            color: rgba(170, 167, 207, 0.70);
+            font-size: 15px;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+
+        }
+
+        .inputs {
+            flex-direction: column;
+            width: 100%;
+            gap: 18px;
+        }
+
+        input {
+            box-sizing: inherit;
+            padding: 17.356px 20.511px 15.778px 20.511px;
+            width: 100%;
+            min-height: 20px;
+            height: auto;
+            margin-bottom: 0;
+            max-width: 500px;
+            border-radius: 7.889px;
+        }
+
+        textarea {
+            box-sizing: inherit;
+            margin-top: 23px;
+            height: 139px;
+            width: 100%;
+            padding: 20px 11px 11px 20px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        input::-webkit-input-placeholder {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        textarea::-webkit-input-placeholder {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        input::-moz-placeholder {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        textarea::-moz-placeholder {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        .Message {
+            flex-direction: column;
+            margin-top: 31px;
+        }
+
+        .MessageText {
+            font-size: 15px;
+            line-height: 16.567px;
+            gap: 4px;
+        }
+
+        .messageStar {
+            font-size: 31.556px;
+            line-height: normal;
+        }
+
+        button {
+            margin-top: 24px;
+            font-size: 15px;
+            text-align: center;
+            color: #FFF;
+            border: 1.42px solid #FFF;
+        }
+    }
+
+
+}
+@media (max-width: 1800px) and (min-width: 1024px) {
+    .Hear{
+        height: 489px;
+    }
+    .FormBlock {
+        padding: 47px 39px;
+        gap: 31px;
+        height: 489px;
+
+        h2 {
+            font-size: 33.133px;
+            line-height: 50.489px;
+        }
+
+        p {
+            color: rgba(170, 167, 207, 0.70);
+            font-size: 15px;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+        }
+
+        .inputs {
+            flex-direction: row;
+            width: 100%;
+            gap: 18px;
+        }
+
+        input {
+            box-sizing: inherit;
+            padding: 17.356px 20.511px 15.778px 20.511px;
+            width: 100%;
+            min-height: 20px;
+            height: auto;
+            margin-bottom: 0;
+            max-width: 500px;
+            border-radius: 7.889px;
+        }
+
+        textarea {
+            box-sizing: inherit;
+            margin-top: 23px;
+            height: 112px;
+            width: 100%;
+            max-width: 100%;
+            padding: 20px 11px 11px 20px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        input::-webkit-input-placeholder {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        textarea::-webkit-input-placeholder {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        input::-moz-placeholder {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        textarea::-moz-placeholder {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        .Message {
+            flex-direction: row;
+            margin-top: 31px;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .MessageText {
+            font-size: 15px;
+            line-height: 16.567px;
+            gap: 4px;
+        }
+
+        .messageStar {
+            font-size: 31.556px;
+            line-height: normal;
+        }
+
+        button {
+            font-size: 15px;
+            text-align: center;
+            color: #FFF;
+            border: 1.42px solid #FFF;
+        }
+    }
+}

@@ -1,0 +1,322 @@
+.FirstContent {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+
+    &::after {
+        z-index: 0;
+        content: "";
+        position: absolute;
+        top: 100;
+        left: 0;
+        width: 50%;
+        height: 75%;
+        opacity: 0.8;
+        border-radius: 135px;
+        background-image: -webkit-linear-gradient(299deg, #FFF06D 0%, #63499A 100%);
+        background-image: -moz-linear-gradient(299deg, #FFF06D 0%, #63499A 100%);
+        background-image: -o-linear-gradient(299deg, #FFF06D 0%, #63499A 100%);
+        -webkit-filter: blur(200px);
+        filter: blur(200px);
+        transform: translate3d(0, 0, 0);
+
+    }
+}
+
+.ContentBlockText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 682px;
+}
+
+.ContentHeader {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.ContentText {
+    color: rgba(147, 145, 177, 0.70);
+
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.ContentImg {
+    width: 100%;
+    max-width: 650px;
+    z-index: 4;
+    flex-shrink: 0;
+    .MainForm{
+        width: 700px;
+        position: relative;
+    }
+    .AutoEmail{
+        position: absolute;
+        bottom: -40px;
+        left: -60px;
+        backdrop-filter: blur(25px);
+        border-radius: 18.864px;
+        filter: box-shadow (30px 20px 75px rgba(44, 33, 77, 0.29));
+        
+    }
+    .MailForm{
+        backdrop-filter: blur(10px);
+    }
+    .Files{
+        position: absolute;
+        border-radius: 18.864px;
+        bottom: 90px;
+        right: 20px;
+        box-shadow: 18.863636016845703px 37.727272033691406px 47.15909194946289px 0px rgba(44, 33, 77, 0.20);
+        backdrop-filter: blur(23.579545974731445px);
+    }
+}
+
+.custom {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 24px;
+
+}
+.Suppliers {
+    color: #F4A17C;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    padding: 6px 16px 10px 16px;
+    border-radius: 999px;
+    border: 2px solid #F4A17C;
+}
+
+.Factories {
+    color: #AE89FB;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    padding: 6px 16px 10px 16px;
+    border: 2px solid #AE89FB;
+    border-radius: 999px;
+    
+}
+.Customers {
+    color: #42CEEA;
+    font-family: Montserrat;
+    
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    padding: 6px 16px 10px 16px;
+    border-radius: 999px;
+    border: 2px solid #42CEEA;
+}
+
+@media (max-width: 500px) {
+    .FirstContent{
+        flex-direction: column;
+        justify-content: center;
+        &::after {
+            z-index: 0;
+            content: "";
+            position: absolute;
+            top: 100;
+            left: 0;
+            width: 50%;
+            height: 85%;
+            opacity: 0.8;
+            border-radius: 135px;
+            filter: blur(200px);
+    
+        }
+    }
+    .ContentBlockText{
+        margin: 0;
+        width: 100%;
+    }
+    .ContentHeader{
+        font-size: 32px;
+        line-height: 114%;
+    }
+    .ContentText{
+        font-size: 17px;
+        line-height: 145%; 
+    }
+    .ContentImg {
+        width: 100%;
+        height: 400px;
+        max-width: 753px;
+        z-index: 4;
+        flex-shrink: 0;
+        .MainForm{
+            width: 100%;  
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .Chats{
+            width: 90.803px;
+            height: 228.089px;
+        }
+        .AutoEmail{
+            position: absolute;
+            width: 134.583px;
+            height: 99.451px;
+            bottom: -40px;
+            left: 0px;
+            backdrop-filter: blur(25px);
+            border-radius: 10.196px;
+            filter: box-shadow (30px 20px 75px rgba(44, 33, 77, 0.29));
+            
+        }
+        .MailForm{
+            backdrop-filter: blur(10px);
+            width: 219.441px;
+            height: 228.629px;  
+        }
+        .Files{
+            position: absolute;
+            width: 134.583px;
+            height: 99.451px;
+            border-radius: 10.196px;
+            bottom: 45px;
+            right: 0px;
+            box-shadow: 18.863636016845703px 37.727272033691406px 47.15909194946289px 0px rgba(44, 33, 77, 0.20);
+            backdrop-filter: blur(23.579545974731445px);
+        }
+    }
+    .custom{
+        font-size: 20px;
+        gap: 6px;
+    }
+    .Suppliers,
+    .Factories,
+    .Customers{
+        padding: 8px;
+    }
+}
+@media (max-width: 1024px) and (min-width: 500px) {
+
+    .FirstContent{
+        margin-top: 100px;
+        text-align: center;
+        min-height: 100vh;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        &::after {
+            z-index: 0;
+            content: "";
+            position: absolute;
+            top: 100;
+            left: 0;
+            width: 50%;
+            height: 85%;
+            opacity: 0.8;
+            border-radius: 135px;
+            filter: blur(200px);
+        }
+    }
+    .ContentBlockText{
+        margin: 0;
+        width: 100%;
+        max-width: 610px;
+        align-items: center;
+    }
+    .ContentHeader {
+        font-size: 38px;
+        font-weight: 500;
+        line-height: 114%;
+    }
+
+    .ContentText {
+        font-size: 17px;
+    }
+    .ContentImg {
+        width: 100%;
+        max-width: 753px;
+        height: 485.244px;
+        z-index: 4;
+        flex-shrink: 0;
+        .MainForm{
+            width: 700px;
+            height: 433.95px;  
+            position: relative;
+        }
+        .Chats{
+            width: 172.349px;
+            height: 432.924px;
+        }
+        .AutoEmail{
+            position: absolute;
+            width: 388.811px;
+            height: 223.643px;
+            bottom: -40px;
+            left: -60px;
+            backdrop-filter: blur(25px);
+            border-radius: 18.864px;
+            filter: box-shadow (30px 20px 75px rgba(44, 33, 77, 0.29));
+            
+        }
+        .MailForm{
+            backdrop-filter: blur(10px);
+            width: 416.51px;
+            height: 433.95px;  
+        }
+        .Files{
+            position: absolute;
+            width: 255.445px;
+            height: 188.763px;
+            border-radius: 18.864px;
+            bottom: 90px;
+            right: -40px;
+            box-shadow: 18.863636016845703px 37.727272033691406px 47.15909194946289px 0px rgba(44, 33, 77, 0.20);
+            backdrop-filter: blur(23.579545974731445px);
+        }
+    }
+    
+    .custom{
+        font-size: 20px;
+        gap: 6px;
+    }
+    .Suppliers,
+    .Factories,
+    .Customers{
+        padding: 8px;
+    }
+}
+@media (max-width: 1800px) and (min-width: 1025px){
+    .FirstContent{
+        justify-content: space-around;
+    }
+    .ContentHeader{
+        font-size: 38px;
+    }
+    .ContentText{
+        font-size: 17px;
+    }
+    .ContentImg{
+        max-width: 700px;
+        height: auto;
+        flex-shrink: 0;
+    }
+    .custom{
+        font-size: 20px;
+        gap: 13px;
+    }
+}

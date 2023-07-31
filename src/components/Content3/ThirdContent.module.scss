@@ -1,0 +1,301 @@
+.ThirdContent {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+
+    &::after {
+        z-index: 0;
+        content: "";
+        position: absolute;
+        top: 100px;
+        left: -20px;
+        width: 50%;
+        height: 75%;
+        opacity: 0.40;
+        border-radius: 200px;
+        background-image: -webkit-linear-gradient(303deg, #6D4AB8 0%, #D2AE78 100%);
+        background-image: -moz-linear-gradient(303deg, #6D4AB8 0%, #D2AE78 100%);
+        background-image: -o-linear-gradient(303deg, #6D4AB8 0%, #D2AE78 100%);
+        -webkit-filter: blur(200px);
+        filter: blur(200px);
+        transform: translate3d(0, 0, 0);
+
+    }
+}
+
+.ContentBlockText {
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 682px;
+}
+
+.ContentHeader {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.ContentText {
+    color: rgba(147, 145, 177, 0.70);
+
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.ContentImg {
+    width: 50%;
+    z-index: 4;
+    flex-shrink: 0;
+    .MainForm{
+        width: 661.275px;
+        height: 468px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .BestSellser {
+            position: absolute;
+            left: -25px;
+            bottom: 15px;
+            backdrop-filter: blur(10px);
+            
+        }
+        
+        .Calendar {
+            border-radius: 20px;
+            box-shadow: 0px 20px 60px 0px rgba(5, 2, 11, 0.25);
+            backdrop-filter: blur(10px);
+            transform: translate3d(0, 0, 0);
+        }
+        
+        .FutureCash {
+            position: absolute;
+            box-shadow: -20px 10px 70px 0px rgba(7, 3, 14, 0.15);
+            border-radius: 15px;
+            backdrop-filter: blur(25px);
+            transform: translate3d(0, 0, 0);
+            right: 25px;
+            bottom: -35px;
+        }
+        
+        .Sales {
+            position: absolute;
+            border-radius: 15px;
+            box-shadow: 20px 20px 70px 0px rgba(7, 3, 14, 0.15);
+            backdrop-filter: blur(50px);
+            transform: translate3d(0, 0, 0);
+            bottom: -50px;
+            left: 90px;
+        }
+        
+    }
+}
+@media (max-width: 500px) {
+    .ThirdContent{
+        flex-direction: column;
+        justify-content: center;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 50%;
+            height: 20%;
+            opacity: 0.7;
+            border-radius: 200px;
+            background: linear-gradient(303deg, #6D4AB8 0%, #D2AE78 100%);
+
+            filter: blur(200px);
+    
+        }
+    }
+    .ContentBlockText{
+        margin: 0;
+        width: 100%;
+    }
+    .ContentHeader{
+        font-size: 32px;
+        line-height: 114%;
+    }
+    .ContentText{
+        font-size: 17px;
+        line-height: 145%; 
+    }
+    .ContentImg {
+        width: 100%;
+        z-index: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        flex-shrink: 0;
+        .MainForm{
+            max-width: 400px;
+            height: 283.089px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            .BestSellser {
+                position: absolute;
+                max-width: 86.5px;
+                max-height: 185.702px;
+                left: -10px;
+                bottom: 0px;
+                backdrop-filter: blur(10px);
+            }
+            
+            .Calendar {
+                max-width: 255.869px;
+                max-height: 209.898px;
+                border-radius: 20px;
+                box-shadow: 0px 20px 60px 0px rgba(5, 2, 11, 0.25);
+                backdrop-filter: blur(10px);
+            }
+            
+            .FutureCash {
+                position: absolute;
+                box-shadow: -20px 10px 70px 0px rgba(7, 3, 14, 0.15);
+                border-radius: 15px;
+                backdrop-filter: blur(25px);
+                left: 58%;
+                width: 150.618px;
+                height: 136.101px;
+                bottom: -20px;
+            }
+            
+            .Sales {
+                position: absolute;
+                max-width: 150.618px;
+                max-height: 107.066px;
+                border-radius: 15px;
+                box-shadow: 20px 20px 70px 0px rgba(7, 3, 14, 0.15);
+                backdrop-filter: blur(50px);
+                bottom: -40px;
+                left: 60px;
+            }
+            
+        }
+    }
+}
+@media (max-width: 1024px) and (min-width: 500px){
+    .ThirdContent{
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+        height: auto;
+        align-items: center;
+    }
+    .ContentBlockText{
+        margin: 0;
+        width: 100%;
+        max-width: 610px;
+        align-items: center;
+    }
+    .ContentHeader{
+        font-size: 32px;
+        line-height: 114%;
+    }
+    .ContentText{
+        font-size: 17px;
+        line-height: 145%; 
+    }
+    .ContentImg {
+        width: 100%;
+        z-index: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        flex-shrink: 0;
+        .MainForm{
+            max-width: 746px;
+            height: 528px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            .BestSellser {
+                position: absolute;
+                max-width: 161px;
+                max-height: 346px;
+                left: -25px;
+                bottom: 50px;
+                backdrop-filter: blur(10px);
+            }
+            
+            .Calendar {
+                max-width: 477.66px;
+                max-height: 391.84px;
+                border-radius: 20px;
+                box-shadow: 0px 20px 60px 0px rgba(5, 2, 11, 0.25);
+                backdrop-filter: blur(10px);
+            }
+            
+            .FutureCash {
+                position: absolute;
+                box-shadow: -20px 10px 70px 0px rgba(7, 3, 14, 0.15);
+                border-radius: 15px;
+                backdrop-filter: blur(25px);
+                left: 58%;
+                width: 281.176px;
+                height: 254.075px;
+                bottom: -20px;
+            }
+            
+            .Sales {
+                position: absolute;
+                max-width: 281.176px;
+                max-height: 199.872px;
+                border-radius: 15px;
+                box-shadow: 20px 20px 70px 0px rgba(7, 3, 14, 0.15);
+                backdrop-filter: blur(50px);
+                bottom: -20px;
+                left: 80px;
+            }
+            
+        }
+    }
+    .custom{
+        font-size: 20px;
+        gap: 6px;
+    }
+    .Suppliers,
+    .Factories,
+    .Customers{
+        padding: 8px;
+    }
+}
+@media (max-width: 1800px) and (min-width: 1025px){
+    .ContentBlockText{
+        max-width: 545px;
+    }
+    .ContentHeader{
+        font-size: 38px;
+    }
+    .ContentText{
+        font-size: 17px;
+    }
+    .ContentImg{
+        max-width: 688px;
+        height: auto;
+        flex-shrink: 0;
+    }
+    .custom{
+        font-size: 20px;
+        gap: 13px;
+    }
+}

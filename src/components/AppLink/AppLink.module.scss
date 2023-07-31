@@ -1,0 +1,49 @@
+.AppLink {
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.primary {
+    color: var(--primary-color);
+}
+
+.inverted {
+    color: var(--inverted-primary-color);
+}
+
+.primary:hover {
+    color: var(--hovered-color);
+}
+
+.inverted:hover {
+    color: var(--hovered-color);
+}
+
+.MenuLink {
+    color: rgba(230, 227, 251, 0.70);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.217px;
+    transition: all 0.3s;
+}
+
+.MenuLink:hover {
+    color: rgba(230, 227, 251, 1);
+
+}
+
+@media (max-width: 825px) {
+    .MenuLink {
+        color: #fff;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+    }
+
+}

@@ -1,0 +1,55 @@
+.Menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-direction: row;
+    z-index: -1;
+    font-size: var(--font-size-s);
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.05);
+
+}
+.MenuLink {
+    color: rgba(230, 227, 251, 0.70);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.217px;
+}
+
+@media (max-width: 825px) {
+    .Menu {
+        position: fixed;
+        font-size: var(--font-size-l);
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 1000px;
+        flex-direction: column;
+        backdrop-filter: blur(2px);
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+        background: #03020C;
+    }
+
+    .collapsed {
+        position: fixed;
+        font-size: var(--font-size-l);
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        border-radius: 0px;
+        backdrop-filter: blur(2px);
+        justify-content: center;
+        align-items: center;
+        background: #03020C;
+    }
+}

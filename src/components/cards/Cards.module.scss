@@ -1,0 +1,167 @@
+.Cards {
+    position: relative;
+    top: -250px;
+    height: 100vh;
+    min-width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template:
+        "a a a a" 250px "b b b b" 1px
+        "c c c c" 250px;
+    column-gap: 30px;
+    justify-items: center;
+
+}
+
+hr {
+    width: 100%;
+    grid-column: 1/1;
+    border: 0;
+    height: 1px;
+    grid-area: b;
+    background-image: linear-gradient(to right, rgba(147, 145, 177, 0), rgba(147, 145, 177, 0.3), rgba(147, 145, 177, 0.3), rgba(147, 145, 177, 0));
+}
+
+
+
+.card {
+    font: var(--font-s);
+    padding: 20px 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 313px;
+    position: relative;
+
+    &:nth-child(-n + 4) {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -15px;
+            width: 1px;
+            background: linear-gradient(180deg, rgba(147, 145, 177, 0.00) 0%, rgba(147, 145, 177, 0.30) 100%);
+        }
+    }
+
+    // Правая граница разделителей (hr) между карточками во второй строке
+    &:nth-child(n + 6) {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -15px;
+            width: 1px;
+            background: linear-gradient(180deg, rgba(147, 145, 177, 0.30) 0%, rgba(147, 145, 177, 0.00) 100%); // Здесь можно установить другой цвет для разделителя во второй строке
+        }
+    }
+
+    // Убираем разделитель у последней карточки в каждой строке
+    &:nth-child(n+4):not(:nth-child(n+6)) {
+        &::after {
+            display: none;
+        }
+    }
+
+    &:nth-child(n+9):not(:nth-child(-n+4)) {
+        &::after {
+            display: none;
+        }
+    }
+
+}
+
+
+.cardText {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+
+    p {
+        width: 100%;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 130%;
+        font-size: 18px;
+        width: 313px;
+        color: rgba(147, 145, 177, 0.50);
+    }
+}
+
+@media (max-width: 500px) {
+    .Cards {
+        height: 100%;
+        min-width: 100%;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    hr {
+        display: none;
+    }
+
+    .card {
+        display: flex;
+        padding: 15.615px 0px 23.423px 0px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        row-gap: 23.423px;
+
+        &::after {
+            display: none;
+        }
+
+        &:nth-child(n):not(:last-child) {
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                height: 1px;
+                width: 100%;
+                background: linear-gradient(to right, rgba(147, 145, 177, 0), rgba(147, 145, 177, 0.3), rgba(147, 145, 177, 0.3), rgba(147, 145, 177, 0));
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) and (min-width: 500px) {
+    .card {
+        max-width: 198px;
+        gap: 18px;
+        padding: 30px 0 30px;
+    }
+
+    .cardText {
+        max-width: 198px;
+
+        p {
+            max-width: 198px;
+            font-size: 15px;
+            font-weight: 400;
+        }
+    }
+}
+@media (max-width: 1800px) and (min-width: 1300px){
+    .card {
+        max-width: 300px;
+        gap: 20px;
+        padding: 30px 0 30px;
+    }
+    .cardText {
+        max-width: 300px;
+
+        p {
+            max-width: 300px;
+        }
+    }
+}
