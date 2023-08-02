@@ -13,6 +13,7 @@
     justify-items: center;
     &::after {
         position: absolute;
+        z-index: -1;
         top: 0;
         max-width: 972px;
         width: 100%;
@@ -20,7 +21,7 @@
         max-height: 816.201px;
         content: '';
         border-radius: 1161.517px;
-        opacity: 0.5;
+        opacity: 0.35;
         background-image: -webkit-linear-gradient(294deg, #B63AE1 0%, #5A45DD 100%);
         background-image: -moz-linear-gradient(294deg, #B63AE1 0%, #5A45DD 100%);
         background-image: -o-linear-gradient(294deg, #B63AE1 0%, #5A45DD 100%);
