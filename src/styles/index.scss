@@ -31,9 +31,9 @@ body {
   max-width: 1440px;
   display: flex;
   flex-direction: column;
-  margin-top: var(--header-height);
-  padding: 0 1em;
-
+  padding-top: var(--header-height);
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .gradient {
@@ -79,6 +79,8 @@ body {
 @media (max-width: 1440px) and (min-width: 825px){
 
   .page-wrapper {
-    padding: 0 3em;
+    padding-top: var(--header-height);
+    padding-left: 3em;
+    padding-right: 3em;
   }
 }

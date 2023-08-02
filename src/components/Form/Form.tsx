@@ -1,8 +1,9 @@
-import { FC, useRef } from 'react'
+import { FC, useRef, useState } from 'react'
 import cls from './Form.module.scss'
 import { classNames } from '../classNames/classNames';
 import { AppLink } from '../AppLink/AppLink';
 import emailjs from '@emailjs/browser';
+import Notification from '../Notification/Notification';
 
 
 interface FormProps {
@@ -10,20 +11,37 @@ interface FormProps {
 }
 
 export const FormContent: FC<FormProps> = ({ className }) => {
-    const form = useRef();
+    const form = useRef<HTMLFormElement>(null);
+    const [notificationMessage, setNotificationMessage] = useState('');
 
+    const handleNotificationClose = () => {
+        setNotificationMessage('');
+    };
+    const resetForm = () => {
+        if (form.current) {
+            form.current.reset();
+        }
+    };
+    const handleShowNotification = (text) => {
+        setNotificationMessage(text);
+    };
     const sendEmail = (e) => {
         e.preventDefault();
 
         emailjs.sendForm('service_2460sdv', 'template_iy4pfzy', form.current, 'o2yUBy-adRIVEL-PH')
             .then((result) => {
                 console.log(result.text);
+                handleShowNotification('rer');
+                resetForm();
             }, (error) => {
                 console.log(error.text);
             });
     };
     return (
         <div className={classNames(cls.Form, {}, [className])}>
+            {notificationMessage && (
+                <Notification message={notificationMessage} onClose={handleNotificationClose} />
+            )}
             <div className={cls.block}>
                 <div className={cls.Hear}>
                     <h1>
@@ -51,9 +69,8 @@ export const FormContent: FC<FormProps> = ({ className }) => {
                         <div className={cls.Message}>
                             <div className={cls.MessageText}>
                                 <p className={cls.messageStar}>*</p>
-                                <p>By send, you agree to our<br />
-                                    <AppLink to={'/tos'}>Terms of Service</AppLink> and
-                                    <AppLink to={'privacy'}> Privacy Policy</AppLink>
+                                <p>By clicking send, I agree that I have <br />
+                                    read and I accept the  <AppLink to={'/tos'}>Terms of Service</AppLink>
                                 </p>
                             </div>
                             <button type='submit' >Send message</button>

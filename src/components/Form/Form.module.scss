@@ -164,6 +164,12 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+        transition: all 0.3s;
+    }
+    button:hover{
+        color: var(--bg-color);
+        background: var(--primary-color);
+        border: 1px solid var(--primary-color);
     }
 
     .Message {

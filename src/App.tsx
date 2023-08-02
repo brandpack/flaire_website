@@ -5,6 +5,7 @@ import { Footer } from './components/Footer/Footer';
 import React, { Suspense } from 'react';
 import { BlogPage } from './pages/Blog/BlogPage';
 import ToS from './pages/Tos/ToS';
+import About from './pages/About/About';
 
 function App() {
     const LazyMainPage = React.lazy(() => import('./pages/MainPage'))
@@ -15,6 +16,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<LazyMainPage />} />
                     <Route path='/blog' element={<BlogPage />} />
+                    <Route path='/About' element={<About />} />
                     <Route path='/tos' element={<ToS />} />
                 </Routes>
             </Suspense>

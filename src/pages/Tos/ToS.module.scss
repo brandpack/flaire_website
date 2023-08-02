@@ -2,12 +2,16 @@
     margin-top: 90px;
     display: flex;
     flex-direction: column;
+    max-width: 720px;
     gap: 60px;
     justify-content: center;
     align-items: center;
+    align-self: center;
+    text-align: justify;
 
     h1 {
-        max-width: 720px;
+        width: 100%;
+        text-align: left;
         color: #FFF;
         font-family: Krona One;
         font-size: 38px;
@@ -17,6 +21,8 @@
     }
 
     h2 {
+        width: 100%;
+        text-align: left;
         color: #FFF;
         font-family: Montserrat;
         font-size: 38px;
