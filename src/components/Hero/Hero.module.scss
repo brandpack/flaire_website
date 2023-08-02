@@ -231,6 +231,77 @@
     .Hero{
         gap: 55px;
     }
+    .Contact {
+        top: 362px;
+        left: 54px;
+        svg{
+            width: 50%;
+            height: 50%;
+        }
+    }
+    
+    .Mail {
+        top: 280px;
+        left: 60px;
+        svg{
+            width: 50%;
+            height: 50%;
+        }
+    }
+    
+    .File {
+        top: 320px;
+        left: 120px;
+        svg{
+            width: 50%;
+            height: 50%;
+        }
+    }
+    
+    .Analytics {
+        top: 250px;
+        left: 130px;
+        svg{
+            width: 50%;
+            height: 50%;
+        }
+    }
+    
+    .Calendar {
+        top: 330px;
+        right: -50px;
+        svg{
+            width: 50%;
+            height: 50%;
+        }
+    }
+    
+    .Dollar {
+        right: 70px;
+        top: 320px;
+        svg{
+            width: 50%;
+            height: 50%;
+        }
+    }
+    
+    .Photo {
+        right: 70px;
+        top: 280px;
+        svg{
+            width: 50%;
+            height: 50%;
+        }
+    }
+    
+    .Chart {
+        right: 0px;
+        top: 240px;
+        svg{
+            width: 50%;
+            height: 50%;
+        }
+    }
 }
 @media (max-width: 1440px) and (min-width: 1025px){
     .Hero{
