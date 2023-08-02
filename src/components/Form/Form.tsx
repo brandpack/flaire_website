@@ -58,7 +58,7 @@ export const FormContent: FC<FormProps> = ({ className }) => {
                 <div className={cls.FormBlock}>
                     <div className={cls.Header}>
                         <h2>Get in touch</h2>
-                        <p>if you prefer, send us an email below and we&apos;ll reach out to you</p>
+                        <p>If you prefer, send us an email below and we&apos;ll reach out to you</p>
                     </div>
                     <form ref={form} onSubmit={sendEmail}>
                         <div className={cls.inputs}>
