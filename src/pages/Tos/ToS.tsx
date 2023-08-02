@@ -66,7 +66,7 @@ const ToS: FC<MainPageProps> = ({ className }) => {
                     <b>5.4 Customer Responsibility for Operating its Own Business.</b>  Customer acknowledges that it, and not Flaire, is responsible for operating Customer’s own business, including with respect to obtaining all licenses, permits and other governmental registrations to enable its use of the Services.  The Flaire Solution is not intended to be used as advice as to whether to engage in any particular transaction. <br /><br />
                 </p>
                 <h2>
-                    6. PROFESSIONAL SERVICES.
+                    6. Professional services.
                 </h2>
                 <p> 
                     Where the parties have agreed to Flaire’s provision of Professional Services, the details of such Professional Services will be set out in an Order Form or a mutually executed statement of work (“SOW”).  The Order Form or SOW, as applicable, will include: (a) a description of the Professional Services; (b) the schedule for the performance of the Professional Services; and (c) the Fees applicable for the performance of the Professional Services. Each Order Form or SOW, as applicable, will incorporate the terms and conditions of this Agreement.  To the extent that a conflict arises between the terms and conditions of an Order Form or SOW and the terms of this Agreement, the terms and conditions of this Agreement will govern, except to the extent that the Order Form or SOW, as applicable, expressly states that it supersedes specific language in the Agreement. <br /><br />
@@ -78,7 +78,7 @@ const ToS: FC<MainPageProps> = ({ className }) => {
                     <b>7.3 Additional Agreements.</b> To the extent that Flaire or Customer reasonably determine that Applicable Data Protection Laws require the parties to execute any additional agreements governing Personal Data, the parties agree to negotiate in good faith with respect to such additional agreements. <br /><br />
                 </p>
                 <h2>
-                    8. DISCLAIMER.
+                    8. Disclaimer.
                 </h2>
                 <p>
                     TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SERVICES, LICENSED MATERIAL AND DOCUMENTATION ARE PROVIDED “AS IS,” WITHOUT ANY CONDITION OR WARRANTY WHATSOEVER. THE ENTIRE RISK ASSOCIATED WITH THE USE OF THE SERVICES RESIDES WITH CUSTOMER. FLAIRE EXPRESSLY DISCLAIMS ALL OTHER REPRESENTATIONS OR WARRANTIES, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF TITLE, NON-INFRINGEMENT, NON-INTERFERENCE AND/OR QUIET ENJOYMENT, SYSTEM INTEGRATION, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND DATA ACCURACY.  FLAIRE DOES NOT WARRANT THAT OPERATION OF THE FLAIRE SOLUTION WILL BE UNINTERRUPTED OR ERROR-FREE. <br /><br />
