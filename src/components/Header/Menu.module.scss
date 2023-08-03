@@ -30,7 +30,7 @@
     top: 150%;
     /* Position the dropdown below the menu */
     left: -60%;
-    display: grid;
+    display: none;
     padding: 20px;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 15px;
@@ -43,6 +43,25 @@
     min-width: 150px;
     max-width: 925px;
     /* Set the minimum width of the dropdown */
+}
+.Open {
+    display: grid;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    /* Position the dropdown below the menu */
+    left: -60%;
+    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    flex-direction: column;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(27, 31, 54, 0.98);
+    // backdrop-filter: blur(25px);
+    /* Make sure the dropdown appears above the menu */
+    min-width: 150px;
+    max-width: 925px;
 }
 
 
@@ -97,18 +116,46 @@
         position: fixed;
         font-size: var(--font-size-l);
         width: 100vw;
+        padding-top:300px;
         height: 100vh;
         top: 0;
         left: 1000px;
         flex-direction: column;
         backdrop-filter: blur(2px);
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         transition: all 0.3s;
         background: #03020C;
+        overflow-y: scroll;
     }
     .Mobile{
-        display: none !important;
+        display: flex;
+        flex-direction: column;
+        font-family: Montserrat;
+        font-size: 32px;
+        color: #fff;
+        svg{
+            display: none;
+        }
+        .DropdownContent{
+            margin-top: 32px;
+            position: relative;
+            width: 100%;
+            background: #03020C;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .OpenM{
+            display: flex;
+            transition: all 0.3s;
+        }
+        .lines::after{
+            display: none;
+        }
+        .lines::before{
+            display: none;
+        }
     }
     .collapsed {
         position: fixed;
@@ -121,7 +168,8 @@
         flex-direction: column;
         border-radius: 0px;
         backdrop-filter: blur(2px);
-        justify-content: center;
+        justify-content: flex-start;
+
         align-items: center;
         background: #03020C;
     }

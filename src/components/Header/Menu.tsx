@@ -91,15 +91,27 @@ export const Menu: FC<MenuProps> = ({ className, burger, burgerFn }) => {
     // State to handle dropdown visibility
     const [showDropdown, setShowDropdown] = useState<number | null>(null);
 
-    // Hover event handler for toggling dropdown visibility
+    // Click event handler for toggling dropdown visibility (mobile)
+    const handleDropdownClick = (id: number) => {
+        if (showDropdown === id) {
+            setShowDropdown(null); // Close the dropdown if it's already open
+        } else {
+            setShowDropdown(id); // Open the dropdown if it's closed
+        }
+    };
+
+    // Hover event handler for toggling dropdown visibility (desktop)
     const handleMouseEnter = (id: number) => {
         setShowDropdown(id);
     };
 
-    // Hover event handler for closing dropdown on mouse leave
+    // Hover event handler for closing dropdown on mouse leave (desktop)
     const handleMouseLeave = () => {
         setShowDropdown(null);
     };
+
+    // Media query for mobile devices
+    const isMobile = window.innerWidth <= 825;
 
     return (
         <div className={classNames(cls.Menu, { [cls.collapsed]: burger }, [className])}>
@@ -112,10 +124,11 @@ export const Menu: FC<MenuProps> = ({ className, burger, burgerFn }) => {
                     <div className={classNames(cls.block, { [cls.Mobile]: hasDropdown }, [])} key={l.id}>
                         {isSimpleDropdown ? (
                             <div
-                                onMouseEnter={() => handleMouseEnter(l.id)}
-                                
+                                onClick={() => (isMobile ? handleDropdownClick(l.id) : undefined)} // Show on click for mobile
+                                onMouseEnter={() => (!isMobile ? handleMouseEnter(l.id) : undefined)} // Show on hover for desktop
+                                onMouseLeave={() => (!isMobile ? handleMouseLeave() : undefined)} // Hide on mouse leave for desktop
                                 className={classNames(cls.MenuLink, { [cls.Mobile]: true }, [])}
-                                style={{ cursor: 'pointer', display: 'flex', gap: '6px',alignItems: 'center' }}
+                                style={{ cursor: isMobile ? 'pointer' : 'default', display: 'flex', gap: '6px', alignItems: 'center' }}
                             >
                                 {l.text}<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2 6.06494L7 11.0649L12 6.06494" stroke="#E6E3FB" strokeOpacity="0.7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -137,22 +150,19 @@ export const Menu: FC<MenuProps> = ({ className, burger, burgerFn }) => {
 
                         {hasDropdown && (
                             <div
-                                className={cls.DropdownContent}
-                                style={{ display: isDropdownVisible ? 'grid' : 'none' }}
-                                onMouseEnter={() => handleMouseEnter(l.id)}
-                                onMouseLeave={handleMouseLeave}
+                                className={classNames(cls.DropdownContent, { [cls.Open]: isDropdownVisible && !isMobile,[cls.OpenM]: isDropdownVisible && isMobile }, [])} // Show on hover for desktop
                             >
                                 {l.dropdownItems.map((item, index) => (
                                     <div
                                         key={item.id}
                                         onClick={() => {
                                             burgerFn(false); // Close burger menu if open
-                                            handleMouseLeave(); // Close the dropdown when an item is clicked
+                                            setShowDropdown(null); // Close the dropdown when an item is clicked
                                         }}
                                         className={classNames(cls.DropdownLink, { [cls.lines]: index === 4 }, [])}
-                                        style={{ 
-                                            cursor: 'pointer', 
-                                            display: 'flex', 
+                                        style={{
+                                            cursor: 'pointer',
+                                            display: 'flex',
                                             alignItems: 'center',
                                         }}
                                     >
@@ -174,3 +184,4 @@ export const Menu: FC<MenuProps> = ({ className, burger, burgerFn }) => {
         </div>
     );
 };
+

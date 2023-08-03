@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useEffect, useRef } from 'react'
 import cls from './Content.module.scss'
 import { classNames } from '../classNames/classNames';
 import { ReactComponent as Alert } from '../../assets/Alert.svg';
@@ -7,13 +7,52 @@ import { ReactComponent as List } from '../../assets/List.svg';
 import { ReactComponent as Map } from '../../assets/Map.svg';
 import { ReactComponent as PointerLine } from '../../assets/pointerLine.svg';
 import { ReactComponent as SideBar } from '../../assets/SideBar.svg';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Power0, gsap } from 'gsap';
 interface ContentProps {
     className?: string;
 }
+
+gsap.registerPlugin(ScrollTrigger);
 export const Content: FC<ContentProps> = ({ className }) => {
+    const ContentAnim = useRef(null);
+    const isMobile = window.innerWidth <= 825;
+    useEffect(() => {
+        // Получаем ссылку на блок, который будем анимировать
+        const block = ContentAnim.current;
+
+        // Инициализируем анимацию с помощью GSAP
+        if (!isMobile) {
+            gsap.fromTo(block, {
+                y: 100, // Поднимаем блок на 100px
+                opacity: 0, // Можно добавить анимацию прозрачности
+                duration: 0.4, // Длительность анимации
+                ease: Power0.easeInOut,
+                scrollTrigger: {
+                    trigger: block, // Блок, который будет служить триггером для анимации
+                    start: 'top 80%', // Начинаем анимацию, когда верх блока находится на 80% от верха окна
+                    end: 'bottom 80%', // Заканчиваем анимацию, когда нижняя граница блока находится на 20% от верха окна
+                    scrub: 1, // Значение 1 означает, что анимация будет происходить на всем протяжении скролла
+                },
+            },
+            {
+                y: 0, // Поднимаем блок на 100px
+                opacity: 1, // Можно добавить анимацию прозрачности
+                duration: 0.4, // Длительность анимации
+                ease: Power0.easeInOut,
+                scrollTrigger: {
+                    trigger: block, // Блок, который будет служить триггером для анимации
+                    start: 'top 80%', // Начинаем анимацию, когда верх блока находится на 80% от верха окна
+                    end: 'bottom 40%', // Заканчиваем анимацию, когда нижняя граница блока находится на 20% от верха окна
+                    scrub: 1, // Значение 1 означает, что анимация будет происходить на всем протяжении скролла
+                },
+            });
+        }
+
+    }, []);
     return (
         <div className={classNames(cls.Content, {}, [className])}>
-            <div className={cls.ContentBlockText}>
+            <div ref={ContentAnim} className={cls.ContentBlockText}>
                 <h1 className={cls.ContentHeader}>
                     Gain real-time visibility
                     into every step of your

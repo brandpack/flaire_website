@@ -20,8 +20,8 @@ import { HashLink } from 'react-router-hash-link';
 
 interface HeroProps {
     className?: string;
+    
 }
-gsap.registerPlugin(ScrollTrigger);
 export const Hero: FC<HeroProps> = ({ className }) => {
     const MailAnim = useRef(null);
     const FileAnim = useRef(null);
@@ -32,7 +32,22 @@ export const Hero: FC<HeroProps> = ({ className }) => {
     const PhotoAnim = useRef(null);
     const ChartAnim = useRef(null);
     const TextAnim = useRef(null);
+    const BgAnim = useRef(null);
+    const HeroAnim = useRef(null);
     useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.fromTo(HeroAnim.current, {
+            y: 100,
+            opacity: 0,
+            ease: Power0.easeInOut,
+            duration: 0.5
+        },
+        {
+            y: 0,
+            opacity: 1,
+            ease: Power0.easeInOut,
+            duration: 0.8
+        });
         gsap.to([MailAnim.current,FileAnim.current,ContactAnim.current,AnalyticsAnim.current], {
             x: -1000,
             y: -1000,
@@ -70,10 +85,21 @@ export const Hero: FC<HeroProps> = ({ className }) => {
             },
             ease: Power0.easeInOut
         });
-        
+        gsap.to(BgAnim.current, {
+            y: 50,
+            opacity: 0,
+            scrollTrigger: {
+                start: "top",
+                end: "bottom",
+                scrub: true,
+                // markers: true,
+            },
+            ease: Power0.easeInOut
+        });
+
     }, [])
     return (
-        <div  className={classNames(cls.Hero, {}, [className])}>
+        <div ref={HeroAnim} className={classNames(cls.Hero, {}, [className])}>
             <div ref={TextAnim} className={cls.HeroInformation}>
                 <div className={cls.HeroText}>
                     <h1>
@@ -89,7 +115,7 @@ export const Hero: FC<HeroProps> = ({ className }) => {
                 </div>
                 <HashLink className={cls.Button} smooth to={'/#calendar'} >GET STARTED</HashLink>
             </div>
-            <LazyLoadImage className={cls.img} src={HeroBgImg} alt="HeroBgImg" />
+            <img ref={BgAnim} className={cls.img} src={HeroBgImg} alt="HeroBgImg" />
             <LazyLoadImage className={cls.imgM} src={HeroBgImgM} alt="HeroBgImgM" />
             <Safari className={cls.Safari} />
             <span ref={MailAnim} className={cls.Mail}><Mail /></span>

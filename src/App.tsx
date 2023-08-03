@@ -12,7 +12,7 @@ function App() {
     return (
         <div className="app dark">
             <Header />
-            <Suspense fallback={<h1>Loading...</h1>}>
+            <Suspense fallback={<h1 className='Loading' >Loading...</h1>}>
                 <Routes>
                     <Route path='/' element={<LazyMainPage />} />
                     <Route path='/blog' element={<BlogPage />} />
