@@ -26,7 +26,8 @@ export const Footer: FC<FooterProps> = ({ className }) => {
                     </div>
                     <div className={cls.Links}>
                         <h1 className={cls.LinkHeader}>Company</h1>
-                        <AppLink to={'/'}>About</AppLink>
+                        <AppLink to={'/about#start1'}>About</AppLink>
+                        <AppLink to={'/blog#start2'}>Blog</AppLink>
                     </div>
                     <div className={cls.Links}>
                         <h1 className={cls.LinkHeader}>Info</h1>

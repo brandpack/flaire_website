@@ -126,7 +126,6 @@ export const Menu: FC<MenuProps> = ({ className, burger, burgerFn }) => {
                             <div
                                 onClick={() => (isMobile ? handleDropdownClick(l.id) : undefined)} // Show on click for mobile
                                 onMouseEnter={() => (!isMobile ? handleMouseEnter(l.id) : undefined)} // Show on hover for desktop
-                                onMouseLeave={() => (!isMobile ? handleMouseLeave() : undefined)} // Hide on mouse leave for desktop
                                 className={classNames(cls.MenuLink, { [cls.Mobile]: true }, [])}
                                 style={{ cursor: isMobile ? 'pointer' : 'default', display: 'flex', gap: '6px', flexDirection: 'row' }}
                             >
@@ -150,15 +149,12 @@ export const Menu: FC<MenuProps> = ({ className, burger, burgerFn }) => {
 
                         {hasDropdown && (
                             <div
+                                onMouseLeave={() => (!isMobile ? handleMouseLeave() : undefined)} // Hide on mouse leave for desktop
                                 className={classNames(cls.DropdownContent, { [cls.Open]: isDropdownVisible && !isMobile,[cls.OpenM]: isDropdownVisible && isMobile }, [])} // Show on hover for desktop
                             >
                                 {l.dropdownItems.map((item, index) => (
                                     <div
                                         key={item.id}
-                                        // onClick={() => {
-                                        //     burgerFn(false); // Close burger menu if open
-                                        //     setShowDropdown(null); // Close the dropdown when an item is clicked
-                                        // }}
                                         className={classNames(cls.DropdownLink, { [cls.lines]: index === 4 }, [])}
                                         style={{
                                             cursor: 'pointer',

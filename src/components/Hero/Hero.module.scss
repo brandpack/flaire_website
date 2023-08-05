@@ -106,48 +106,48 @@
 }
 
 .Contact {
-    top: 250px;
-    left: 65px;
+    top: 220px;
+    left: 0px;
 }
 
 .Mail {
     top: 100px;
-    left: 100px;
+    left: 0px;
 }
 
 .File {
-    top: 250px;
-    left: 260px;
+    top: 280px;
+    left: 250px;
 }
 
 .Analytics {
-    top: 130px;
-    left: 280px;
+    top: 180px;
+    left: 200px;
 }
 
 .Calendar {
-    right: 65px;
-    top: 250px;
+    right: 0px;
+    top: 240px;
 }
 
 .Dollar {
-    right: 275px;
-    top: 290px;
+    right: 250px;
+    top: 280px;
 }
 
 .Photo {
-    right: 270px;
-    top: 190px;
+    right: 200px;
+    top: 180px;
 }
 
 .Chart {
-    right: 150px;
+    right: 50px;
     top: 100px;
 }
 
 @media (max-width: 500px) {
     .Hero{
-        height: calc(100vmin - var(--header-mobile-height));
+        height: 100vh;
         justify-content: center;
     }
     .HeroInformation {
@@ -211,11 +211,11 @@
         display: block;
         position: absolute;
         z-index: 1;
-        min-width: 100vw;
-    top: -220px;
-    z-index: 1;
-    width: 840px;
-    scale: 0.6;
+        width: 100vw;
+        // height: 100vh;
+        top: 0%;
+        z-index: 1;
+        // width: 840px;
 
     }
 
@@ -234,82 +234,187 @@
         display: none;
     }
 }
-@media (max-width: 1024px) and (min-width: 500px) {
+@media (max-width: 900px) and (min-width: 501px) {
     .Hero{
-        gap: 85px;
+        height: 100vh;
+        justify-content: center;
     }
     .HeroInformation {
-        margin-top: 10px;
+        
+        margin-top: 240px;
+        width: 380px;
+        align-items: center;
+        gap: 20px;
+        transition: 1s;
+    }
+
+    .HeroText {
+        width: 100%;
+        gap: 8px;
+
+        h1 {
+            color: #FFF;
+            text-align: center;
+            font-family: Krona One;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+        }
+
+        p {
+            width: 380px;
+            color: #A69DBE;
+            text-align: center;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            /* 27px */
+            letter-spacing: 0.27px;
+        }
+    }
+
+    .Button {
+        
+        text-decoration: none;
+        padding: 26px 38px;
+        background-color: #fff;
+        border-radius: 39.094px;
+        color: #141739;
+        font-family: Montserrat;
+        font-size: 21.513px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.43px;
+        text-transform: uppercase;
+    }
+
+    .Safari {
+        display: none;
+    }
+
+    .imgM {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        width: 100vw;
+        // height: 100vh;
+        top: -20%;
+        z-index: 1;
+        // width: 840px;
+
+    }
+
+    .img {
+        display: none;
+    }
+
+    .Mail,
+    .File,
+    .Contact,
+    .Analytics,
+    .Calendar,
+    .Dollar,
+    .Photo,
+    .Chart {
+        display: none;
+    }
+}
+@media (max-width: 1024px) and (min-width: 900px) {
+    .Hero{
+        gap: 135px;
+    }
+    .HeroInformation {
+    }
+    .HeroText{
+        h1{
+            font-family: Krona One;
+            font-size: 30.361px;
+        }
+        p{
+            font-family: Inter;
+            font-size: 15.18px;
+        }
+    }
+    .Button{
+        padding: 21.63px 31.093px;
+        color: #141739;
+        font-family: Montserrat;
+        font-size: 17.859px;
     }
     .Contact {
-        top: 362px;
-        left: 54px;
+        top: 262px;
+        left: -60px;
         svg{
-            width: 50%;
-            height: 50%;
+            width: 75%;
+            height: 75%;
         }
     }
     
     .Mail {
-        top: 280px;
-        left: 60px;
+
+        top: 120px;
+        left: 0px;
         svg{
-            width: 50%;
-            height: 50%;
+            width: 75%;
+            height: 75%;
         }
     }
     
     .File {
         top: 320px;
-        left: 120px;
+        left: 150px;
         svg{
-            width: 50%;
-            height: 50%;
+            width: 75%;
+            height: 75%;
         }
     }
     
     .Analytics {
-        top: 250px;
+        top: 200px;
         left: 130px;
         svg{
-            width: 50%;
-            height: 50%;
+            width: 75%;
+            height: 75%;
         }
     }
     
     .Calendar {
-        top: 330px;
-        right: -50px;
+        top: 272px;
+        right: -120px;
         svg{
-            width: 50%;
-            height: 50%;
+            width: 75%;
+            height: 75%;
         }
     }
     
     .Dollar {
-        right: 70px;
-        top: 320px;
+        right: 80px;
+        top: 310px;
         svg{
-            width: 50%;
-            height: 50%;
+            width: 75%;
+            height: 75%;
         }
     }
     
     .Photo {
         right: 70px;
-        top: 280px;
+        top: 200px;
         svg{
-            width: 50%;
-            height: 50%;
+            width: 75%;
+            height: 75%;
         }
     }
     
     .Chart {
-        right: 0px;
-        top: 240px;
+        right: -30px;
+        top: 120px;
         svg{
-            width: 50%;
-            height: 50%;
+            width: 75%;
+            height: 75%;
         }
     }
 }
@@ -318,42 +423,42 @@
         gap: 70px;
     }
     .Contact {
-        top: 250px;
-        left: 55px;
+        top: 220px;
+        left: 0px;
     }
     
     .Mail {
         top: 100px;
-        left: 90px;
+        left: 0px;
     }
     
     .File {
-        top: 250px;
-        left: 240px;
+        top: 280px;
+        left: 250px;
     }
     
     .Analytics {
-        top: 130px;
-        left: 240px;
+        top: 180px;
+        left: 200px;
     }
     
     .Calendar {
-        right: 55px;
-        top: 250px;
+        right: 0px;
+        top: 240px;
     }
     
     .Dollar {
         right: 250px;
-        top: 285px;
+        top: 280px;
     }
     
     .Photo {
-        right: 240px;
-        top: 190px;
+        right: 200px;
+        top: 180px;
     }
     
     .Chart {
-        right: 130px;
+        right: 50px;
         top: 100px;
     }
   }
