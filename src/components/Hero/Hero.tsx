@@ -1,9 +1,10 @@
 import { FC, useEffect, useRef } from 'react'
 import cls from './Hero.module.scss'
 import { classNames } from '../classNames/classNames';
-import HeroBgImg from '../../assets/Test.jpg';
-import HeroBgImgM from '../../assets/mobile illustration.jpg';
-import { ReactComponent as Safari } from '../../assets/dashbord-safari.svg';
+import HeroBgImg from '../../assets/bg.webp';
+import HeroBgImgM from '../../assets/BgImgM.webp';
+import Safari from '../../assets/DashbordSafari.webp';
+
 import { ReactComponent as Mail } from '../../assets/mail.svg';
 import { ReactComponent as File } from '../../assets/file.svg';
 import { ReactComponent as Contact } from '../../assets/contact.svg';
@@ -32,22 +33,22 @@ export const Hero: FC<HeroProps> = ({ className }) => {
     const PhotoAnim = useRef(null);
     const ChartAnim = useRef(null);
     const TextAnim = useRef(null);
-    const BgAnim = useRef(null);
     const HeroAnim = useRef(null);
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-        gsap.fromTo(HeroAnim.current, {
-            y: 100,
-            opacity: 0,
-            ease: Power0.easeInOut,
-            duration: 0.5
-        },
-        {
-            y: 0,
-            opacity: 1,
-            ease: Power0.easeInOut,
-            duration: 0.8
-        });
+        // gsap.fromTo(HeroAnim.current, {
+        //     y: 100,
+        //     opacity: 0,
+        //     // zIndex: 3,
+        //     ease: Power0.easeInOut,
+        //     duration: 0.5
+        // },
+        // {
+        //     y: 0,
+        //     opacity: 1,
+        //     ease: Power0.easeInOut,
+        //     duration: 0.8
+        // });
         gsap.to([MailAnim.current,FileAnim.current,ContactAnim.current,AnalyticsAnim.current], {
             x: -1000,
             y: -1000,
@@ -85,17 +86,7 @@ export const Hero: FC<HeroProps> = ({ className }) => {
             },
             ease: Power0.easeInOut
         });
-        gsap.to(BgAnim.current, {
-            y: 50,
-            opacity: 0,
-            scrollTrigger: {
-                start: "top",
-                end: "bottom",
-                scrub: true,
-                // markers: true,
-            },
-            ease: Power0.easeInOut
-        });
+
 
     }, [])
     return (
@@ -115,9 +106,9 @@ export const Hero: FC<HeroProps> = ({ className }) => {
                 </div>
                 <HashLink className={cls.Button} smooth to={'/#calendar'} >GET STARTED</HashLink>
             </div>
-            <img ref={BgAnim} className={cls.img} src={HeroBgImg} alt="HeroBgImg" />
-            <LazyLoadImage className={cls.imgM} src={HeroBgImgM} alt="HeroBgImgM" />
-            <Safari className={cls.Safari} />
+            <LazyLoadImage className={cls.img} src={HeroBgImg} alt="HeroBgImg" />
+            <img className={cls.imgM} src={HeroBgImgM} alt="HeroBgImgM" />
+            <LazyLoadImage className={cls.Safari} src={Safari} alt="HeroBgImgM" />
             <span ref={MailAnim} className={cls.Mail}><Mail /></span>
             <span ref={FileAnim} className={cls.File}><File  /></span>
             <span ref={ContactAnim} className={cls.Contact}><Contact  /></span>

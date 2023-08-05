@@ -7,6 +7,7 @@ import { ReactComponent as Files } from '../../assets/Files.svg';
 import { classNames } from '../classNames/classNames';
 import { Power0, gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 interface FirstContentProps {
     className?: string;
@@ -51,16 +52,19 @@ export const FirstContent: FC<FirstContentProps> = ({ className }) => {
     }, []);
     return (
         <div id='cont1' className={classNames(cls.FirstContent, {}, [className])}>
-            <div className={cls.ContentImg}>
+            <LazyLoadComponent>
+                <div className={cls.ContentImg}>
 
-                <div className={cls.MainForm}>
-                    <Chats className={cls.Chats} />
-                    <MailForm className={cls.MailForm} />
-                    <Files className={cls.Files} />
-                    <AutoEmail className={cls.AutoEmail} />
+                    <div className={cls.MainForm}>
+                        <Chats className={cls.Chats} />
+                        <MailForm className={cls.MailForm} />
+                        <Files className={cls.Files} />
+                        <AutoEmail className={cls.AutoEmail} />
+                    </div>
+
                 </div>
+            </LazyLoadComponent>
 
-            </div>
             <div ref={ContentAnim} className={cls.ContentBlockText}>
                 <h1 className={cls.ContentHeader}>
                     Centralize and streamline all of your communication

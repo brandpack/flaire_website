@@ -31,7 +31,7 @@ export const Footer: FC<FooterProps> = ({ className }) => {
                     <div className={cls.Links}>
                         <h1 className={cls.LinkHeader}>Info</h1>
                         <AppLink to={'/'}>Send a message</AppLink>
-                        <AppLink to={'/tos#start'}>Terms of Service</AppLink>
+                        <AppLink to={'/tos#start3'}>Terms of Service</AppLink>
                     </div>
                 </div>
             </div>

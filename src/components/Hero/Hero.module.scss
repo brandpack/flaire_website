@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    gap: 190px;
+    gap: 90px;
 }
 
 .HeroInformation {
@@ -62,6 +62,7 @@
 }
 
 .Button {
+    z-index: 4;
     text-decoration: none;
     border-radius: 48.016px;
     background: #FFF;
@@ -147,6 +148,7 @@
 @media (max-width: 500px) {
     .Hero{
         height: calc(100vmin - var(--header-mobile-height));
+        justify-content: center;
     }
     .HeroInformation {
         
@@ -186,6 +188,7 @@
     }
 
     .Button {
+        
         text-decoration: none;
         padding: 26px 38px;
         background-color: #fff;
@@ -207,9 +210,13 @@
     .imgM {
         display: block;
         position: absolute;
-        left: -1em;
         z-index: 1;
         min-width: 100vw;
+    top: -220px;
+    z-index: 1;
+    width: 840px;
+    scale: 0.6;
+
     }
 
     .img {
@@ -229,7 +236,10 @@
 }
 @media (max-width: 1024px) and (min-width: 500px) {
     .Hero{
-        gap: 55px;
+        gap: 85px;
+    }
+    .HeroInformation {
+        margin-top: 10px;
     }
     .Contact {
         top: 362px;
@@ -305,7 +315,7 @@
 }
 @media (max-width: 1440px) and (min-width: 1025px){
     .Hero{
-        gap: 168px;
+        gap: 70px;
     }
     .Contact {
         top: 250px;

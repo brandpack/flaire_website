@@ -7,6 +7,7 @@ import { ReactComponent as FutureCash } from '../../assets/FutureCash.svg';
 import { ReactComponent as Sales } from '../../assets/Sales.svg';
 import { Power0, gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 interface ThirdContentProps {
     className?: string;
@@ -50,15 +51,16 @@ export const ThirdContent: FC<ThirdContentProps> = ({ className }) => {
     }, []);
     return (
         <div className={classNames(cls.ThirdContent, {}, [className])}>
-            <div className={cls.ContentImg}>
-                <div className={cls.MainForm}>
-                    <BestSellser className={cls.BestSellser} />
-                    <Calendar className={cls.Calendar} />
-                    <FutureCash className={cls.FutureCash} />
-                    <Sales className={cls.Sales} />
+            <LazyLoadComponent>
+                <div className={cls.ContentImg}>
+                    <div className={cls.MainForm}>
+                        <BestSellser className={cls.BestSellser} />
+                        <Calendar className={cls.Calendar} />
+                        <FutureCash className={cls.FutureCash} />
+                        <Sales className={cls.Sales} />
+                    </div>
                 </div>
-
-            </div>
+            </LazyLoadComponent>
             <div ref={ContentAnim} className={cls.ContentBlockText}>
                 <h1 className={cls.ContentHeader}>
                     Centralize data and use AI to make faster, more informed decisions

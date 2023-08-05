@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import { classNames } from '../../components/classNames/classNames';
 import cls from './ToS.module.scss'
 
@@ -9,8 +9,11 @@ interface MainPageProps {
 }
 
 const ToS: FC<MainPageProps> = ({ className }) => {
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
     return (
-        <main id='start'  className={classNames("page-wrapper", {}, [className])}>
+        <main id='start3'  className={classNames("page-wrapper", {}, [className])}>
             <div className={cls.container}>
                 <h1>Terms of Service</h1>
                 <p>

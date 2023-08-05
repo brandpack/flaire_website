@@ -209,11 +209,23 @@
 
 
 }
-@media (max-width: 1024px) and (min-width: 800px) {
+@media (max-width: 1024px) and (min-width: 801px) {
     .FormBlock{
         width: 45%;
     }
     .Hear{
         width: 55%;
+        .HearMain{
+            h1{
+                max-width: 350px;
+                width: 100%;
+                
+            }
+            p{
+                max-width: 350px;
+                width: 100%;
+            }
+        }
+
     }
 }

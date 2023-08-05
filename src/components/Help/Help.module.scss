@@ -25,6 +25,11 @@
         line-height: 145%;
     }
 }
+@media (max-width: 900px) and (min-width: 500px) {
+    .Help{
+        margin-top: 0;
+    }
+}
 @media (max-width: 500px) {
     .Help{
         display: none;

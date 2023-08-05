@@ -14,9 +14,9 @@ export const Calendar: FC<CalendarProps> = ({ className }) => {
                 <div className={cls.Hear}>
                     <div className={cls.HearMain}>
                         <h1>
-                            Schedule time <br />
-                            to learn more<br />
-                            about Flaire<br />
+                            Schedule time
+                            to learn more
+                            about Flaire
                         </h1>
                         <p>
                             We&apos;ll make it easy for you. Just pick a

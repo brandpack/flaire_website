@@ -69,8 +69,8 @@ export const FormContent: FC<FormProps> = ({ className }) => {
                         <div className={cls.Message}>
                             <div className={cls.MessageText}>
                                 <p className={cls.messageStar}>*</p>
-                                <p>By clicking send, I agree that I have <br />
-                                    read and I accept the  <AppLink to={'/tos'}>Terms of Service</AppLink>
+                                <p>By clicking send, I agree that I have
+                                    read and I accept the  <AppLink to={'/tos#start3'}>Terms of Service</AppLink>
                                 </p>
                             </div>
                             <button type='submit' >Send message</button>

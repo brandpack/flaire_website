@@ -32,7 +32,7 @@
 }
 
 .Hear {
-    background: url(../../assets/form.jpg) no-repeat;
+    background: url(../../assets/form.webp) no-repeat;
 
     height: 100%;
     width: 50%;
@@ -198,6 +198,7 @@
         flex-direction: row;
         gap: 6px;
         align-items: center;
+        max-width: 60%;
         a{
             color: #7251B9;
         }
@@ -214,7 +215,7 @@
         line-height: normal;
     }
 }
-@media (max-width: 1024px) and (min-width: 800px) {
+@media (max-width: 1024px) and (min-width: 801px) {
     .Hear {
         padding: 47.333px 39.444px;
         height: 746px;
@@ -224,6 +225,7 @@
         h1 {
             max-width: 325.077px;
             font-size: 44.309px;
+            width: 100%;
             font-style: normal;
             font-weight: 400;
             line-height: 120%;
@@ -232,6 +234,7 @@
 
         p {
             max-width: 325.077px;
+            width: 100%;
             font-size: 17px;
             font-style: normal;
             font-weight: 400;
@@ -326,7 +329,7 @@
 
 @media (max-width: 800px) {
     .Form {
-        max-width: 500px;
+        max-width: 900px;
         flex-direction: column;
     }
 
@@ -396,7 +399,7 @@
             min-height: 20px;
             height: auto;
             margin-bottom: 0;
-            max-width: 500px;
+            max-width: 100%;
             border-radius: 7.889px;
         }
 
@@ -433,6 +436,7 @@
         .Message {
             flex-direction: column;
             margin-top: 31px;
+            width: 100%;
         }
 
         .MessageText {

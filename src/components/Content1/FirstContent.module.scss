@@ -135,10 +135,10 @@
             z-index: 0;
             content: "";
             position: absolute;
-            top: 100;
+            top: 100px;
             left: 0;
-            width: 50%;
-            height: 85%;
+            width: 100%;
+            height: 30%;
             opacity: 0.8;
             border-radius: 135px;
             filter: blur(200px);
@@ -210,7 +210,90 @@
         padding: 8px;
     }
 }
-@media (max-width: 1024px) and (min-width: 500px) {
+@media (max-width: 900px) and (min-width: 500px){
+    .FirstContent{
+        flex-direction: column;
+        justify-content: center;
+        &::after {
+            z-index: 0;
+            content: "";
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            opacity: 0.8;
+            border-radius: 135px;
+            filter: blur(200px);
+    
+        }
+    }
+    .ContentBlockText{
+        margin: 0;
+        width: 100%;
+    }
+    .ContentHeader{
+        font-size: 32px;
+        line-height: 114%;
+    }
+    .ContentText{
+        font-size: 17px;
+        line-height: 145%; 
+    }
+    .ContentImg {
+        width: 100%;
+        height: 400px;
+        max-width: 753px;
+        z-index: 4;
+        flex-shrink: 0;
+        .MainForm{
+            width: 100%;  
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .Chats{
+            width: 90.803px;
+            height: 228.089px;
+        }
+        .AutoEmail{
+            position: absolute;
+            width: 134.583px;
+            height: 99.451px;
+            bottom: -20px;
+            left: 120px;
+            backdrop-filter: blur(25px);
+            border-radius: 10.196px;
+            filter: box-shadow (30px 20px 75px rgba(44, 33, 77, 0.29));
+            
+        }
+        .MailForm{
+            backdrop-filter: blur(10px);
+            width: 219.441px;
+            height: 228.629px;  
+        }
+        .Files{
+            position: absolute;
+            width: 134.583px;
+            height: 99.451px;
+            border-radius: 10.196px;
+            bottom: 45px;
+            right: 60px;
+            box-shadow: 18.863636016845703px 37.727272033691406px 47.15909194946289px 0px rgba(44, 33, 77, 0.20);
+            backdrop-filter: blur(23.579545974731445px);
+        }
+    }
+    .custom{
+        font-size: 20px;
+        gap: 6px;
+    }
+    .Suppliers,
+    .Factories,
+    .Customers{
+        padding: 8px;
+    }
+}
+@media (max-width: 1024px) and (min-width: 900px) {
 
     .FirstContent{
         margin-top: 100px;

@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import { classNames } from '../../components/classNames/classNames';
 import cls from './About.module.scss'
 
@@ -9,8 +9,11 @@ interface AboutProps {
 }
 
 const About: FC<AboutProps> = ({ className }) => {
+    useEffect(()=>{
+        window.scroll
+    },[])
     return (
-        <main id='start' className={classNames("page-wrapper", {}, [className])}>
+        <main id='start1' className={classNames("page-wrapper", {}, [className])}>
             <div className={cls.container}>
                 <div className={cls.knowUs}>
                     <h1>Get to <br /> Know Us</h1>

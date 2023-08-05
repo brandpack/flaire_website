@@ -83,8 +83,8 @@ const HeaderLinks = [
             },
         ],
     },
-    { id: 3, text: 'About', link: '/about#start', hasDropdown: false },
-    { id: 4, text: 'Blog', link: '/blog#start', hasDropdown: false },
+    { id: 3, text: 'About', link: '/about#start1', hasDropdown: false },
+    { id: 4, text: 'Blog', link: '/blog#start2', hasDropdown: false },
 ];
 
 export const Menu: FC<MenuProps> = ({ className, burger, burgerFn }) => {
@@ -128,9 +128,9 @@ export const Menu: FC<MenuProps> = ({ className, burger, burgerFn }) => {
                                 onMouseEnter={() => (!isMobile ? handleMouseEnter(l.id) : undefined)} // Show on hover for desktop
                                 onMouseLeave={() => (!isMobile ? handleMouseLeave() : undefined)} // Hide on mouse leave for desktop
                                 className={classNames(cls.MenuLink, { [cls.Mobile]: true }, [])}
-                                style={{ cursor: isMobile ? 'pointer' : 'default', display: 'flex', gap: '6px', alignItems: 'center' }}
+                                style={{ cursor: isMobile ? 'pointer' : 'default', display: 'flex', gap: '6px', flexDirection: 'row' }}
                             >
-                                {l.text}<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                {l.text}<svg style={{alignSelf: 'center'}} width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2 6.06494L7 11.0649L12 6.06494" stroke="#E6E3FB" strokeOpacity="0.7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
@@ -155,10 +155,10 @@ export const Menu: FC<MenuProps> = ({ className, burger, burgerFn }) => {
                                 {l.dropdownItems.map((item, index) => (
                                     <div
                                         key={item.id}
-                                        onClick={() => {
-                                            burgerFn(false); // Close burger menu if open
-                                            setShowDropdown(null); // Close the dropdown when an item is clicked
-                                        }}
+                                        // onClick={() => {
+                                        //     burgerFn(false); // Close burger menu if open
+                                        //     setShowDropdown(null); // Close the dropdown when an item is clicked
+                                        // }}
                                         className={classNames(cls.DropdownLink, { [cls.lines]: index === 4 }, [])}
                                         style={{
                                             cursor: 'pointer',

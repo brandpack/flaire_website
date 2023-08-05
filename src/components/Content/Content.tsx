@@ -9,6 +9,7 @@ import { ReactComponent as PointerLine } from '../../assets/pointerLine.svg';
 import { ReactComponent as SideBar } from '../../assets/SideBar.svg';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Power0, gsap } from 'gsap';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 interface ContentProps {
     className?: string;
 }
@@ -69,16 +70,19 @@ export const Content: FC<ContentProps> = ({ className }) => {
                     up-to-date, and use activity streams for accountability.
                 </p>
             </div>
-            <div className={cls.ContentImg}>
-                <div className={cls.MainForm}>
-                    <Map className={cls.Map} />
-                    <SideBar className={cls.SideBar} />
-                    <List className={cls.List} />
-                    <PointerLine className={cls.PointerLine} />
-                    <Alert className={cls.Alert} />
-                    <ButtonPurchase className={cls.ButtonPurchase} />
+            <LazyLoadComponent>
+                <div className={cls.ContentImg}>
+                    <div className={cls.MainForm}>
+                        <Map className={cls.Map} />
+                        <SideBar className={cls.SideBar} />
+                        <List className={cls.List} />
+                        <PointerLine className={cls.PointerLine} />
+                        <Alert className={cls.Alert} />
+                        <ButtonPurchase className={cls.ButtonPurchase} />
+                    </div>
                 </div>
-            </div>
+            </LazyLoadComponent>
+
         </div>
     )
 }

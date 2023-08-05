@@ -3,21 +3,21 @@ import './styles/index.scss';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import React, { Suspense } from 'react';
-import { BlogPage } from './pages/Blog/BlogPage';
-import ToS from './pages/Tos/ToS';
-import About from './pages/About/About';
 
 function App() {
     const LazyMainPage = React.lazy(() => import('./pages/MainPage'))
+    const LazyBlogPage = React.lazy(() => import('./pages/Blog/BlogPage'))
+    const LazyTosPage = React.lazy(() => import('./pages/Tos/ToS'))
+    const LazyAboutPage = React.lazy(() => import('./pages/About/About'))
     return (
         <div className="app dark">
             <Header />
             <Suspense fallback={<h1 className='Loading' >Loading...</h1>}>
                 <Routes>
                     <Route path='/' element={<LazyMainPage />} />
-                    <Route path='/blog' element={<BlogPage />} />
-                    <Route path='/About' element={<About />} />
-                    <Route path='/tos' element={<ToS />} />
+                    <Route path='/blog' element={<LazyBlogPage />} />
+                    <Route path='/About' element={<LazyAboutPage />} />
+                    <Route path='/tos' element={<LazyTosPage />} />
                 </Routes>
             </Suspense>
             <Footer />

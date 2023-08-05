@@ -11,9 +11,10 @@ interface BlogPageProps {
     className?: string;
 }
 
-export const BlogPage: FC<BlogPageProps> = ({ className }) => {
+const BlogPage: FC<BlogPageProps> = ({ className }) => {
     const [Posts, setPosts] = useState<any>(null);
     useEffect(() => {
+        window.scrollTo(0,0)
         const apiUrl = 'https://64c4fef4c853c26efada5de6.mockapi.io/api/v1/fixedPost';
         axios.get(apiUrl).then((resp) => {
             const allPosts = resp.data;
@@ -21,7 +22,7 @@ export const BlogPage: FC<BlogPageProps> = ({ className }) => {
         });
     }, []);
     return (
-        <div id='start' className={classNames("page-wrapper", {}, [className])}>
+        <div id='start2' className={classNames("page-wrapper", {}, [className])}>
             <div className={cls.BlogPage}>
 
                 <div className={cls.HeroContent}>
@@ -54,3 +55,4 @@ export const BlogPage: FC<BlogPageProps> = ({ className }) => {
         </div>
     )
 }
+export default BlogPage;
