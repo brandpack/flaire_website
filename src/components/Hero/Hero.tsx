@@ -33,7 +33,7 @@ export const Hero: FC<HeroProps> = ({ className }) => {
     const PhotoAnim = useRef(null);
     const ChartAnim = useRef(null);
     const TextAnim = useRef(null);
-    const HeroAnim = useRef(null);
+    const imgAnim = useRef(null);
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
         // gsap.fromTo(HeroAnim.current, {
@@ -86,11 +86,20 @@ export const Hero: FC<HeroProps> = ({ className }) => {
             },
             ease: Power0.easeInOut
         });
-
+        gsap.to(imgAnim.current, {
+            y: -100,
+            scrollTrigger: {
+                start: "top",
+                end: "bottom",
+                scrub: true,
+                // markers: true,
+            },
+            ease: Power0.easeInOut
+        });
 
     }, [])
     return (
-        <div ref={HeroAnim} className={classNames(cls.Hero, {}, [className])}>
+        <div className={classNames(cls.Hero, {}, [className])}>
             <div ref={TextAnim} className={cls.HeroInformation}>
                 <div className={cls.HeroText}>
                     <h1>
@@ -108,7 +117,9 @@ export const Hero: FC<HeroProps> = ({ className }) => {
             </div>
             <LazyLoadImage className={cls.img} src={HeroBgImg} alt="HeroBgImg" />
             <img className={cls.imgM} src={HeroBgImgM} alt="HeroBgImgM" />
-            <LazyLoadImage className={cls.Safari} src={Safari} alt="HeroBgImgM" />
+            <span ref={imgAnim}>
+                <LazyLoadImage  className={cls.Safari} src={Safari} alt="HeroBgImgM" />
+            </span>
             <span ref={MailAnim} className={cls.Mail}><Mail /></span>
             <span ref={FileAnim} className={cls.File}><File  /></span>
             <span ref={ContactAnim} className={cls.Contact}><Contact  /></span>
