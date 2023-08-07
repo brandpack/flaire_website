@@ -39,8 +39,9 @@ const BlogPage: FC<BlogPageProps> = ({ className }) => {
                             </div> : null
 
                     }
+                    {Posts !== null ? <LazyLoadImage className={cls.HeroImg} src={Posts.fixedPost.image} />: null}
                 </div>
-                {Posts !== null ? <LazyLoadImage className={cls.HeroImg} src={Posts.fixedPost.image} />: null}
+
                 <div className={cls.Posts}>
                     {Posts !== null ? Posts.posts.map((p) => {
                         return (<AppLink target="_blank" className={cls.Post} key={p.id} to={p.url}>
