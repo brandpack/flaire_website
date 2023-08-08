@@ -1,5 +1,5 @@
 .Content {
-    min-height: 100vh;
+    min-height: 90vh;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -107,6 +107,7 @@
 
 @media (max-width: 500px) {
     .Content {
+        min-height: 100vh;
         flex-direction: column-reverse;
         justify-content: center;
 

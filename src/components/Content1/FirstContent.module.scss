@@ -1,5 +1,5 @@
 .FirstContent {
-    min-height: 100vh;
+    min-height: 90vh;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -129,6 +129,7 @@
 
 @media (max-width: 500px) {
     .FirstContent{
+        min-height: 100vh;
         flex-direction: column;
         justify-content: center;
         &::after {
@@ -159,7 +160,7 @@
     }
     .ContentImg {
         width: 100%;
-        height: 400px;
+        height: 250px;
         max-width: 753px;
         z-index: 4;
         flex-shrink: 0;
