@@ -214,6 +214,8 @@
     .ContentBlockText{
         margin: 0;
         width: 100%;
+        text-align: center;
+        align-items: center;
     }
     .ContentHeader{
         font-size: 32px;
@@ -282,6 +284,8 @@
 }
 @media (max-width: 1350px) and (min-width: 900px){
     .ThirdContent{
+        margin-top: 100px;
+        margin-bottom: 100px;
         text-align: center;
         flex-direction: column;
         justify-content: center;

@@ -63,7 +63,7 @@ export const FormContent: FC<FormProps> = ({ className }) => {
                     <form ref={form} onSubmit={sendEmail}>
                         <div className={cls.inputs}>
                             <input placeholder="Full name" type="text" name="user_name" id="name" required />
-                            <input placeholder="Email" type="email" name="user_email" id="email" required />
+                            <input placeholder="Work Email" type="email" name="user_email" id="email" required />
                         </div>
                         <textarea placeholder="Please share more details" name='message' />
                         <div className={cls.Message}>

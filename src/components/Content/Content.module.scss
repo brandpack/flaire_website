@@ -235,6 +235,8 @@
     .ContentBlockText {
         margin: 0;
         width: 100%;
+        text-align: center;
+        align-items: center;
     }
 
     .ContentHeader {
@@ -320,6 +322,7 @@
 }
 @media (max-width: 1350px) and (min-width: 900px) {
     .Content {
+        margin-top: 100px;
         flex-direction: column-reverse;
         justify-content: center;
         min-height: 100vh;
