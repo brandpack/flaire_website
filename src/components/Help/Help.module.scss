@@ -28,10 +28,20 @@
 @media (max-width: 1000px) and (min-width: 500px) {
     .Help{
         margin-top: 0;
+        margin-bottom: 50px;
     }
 }
 @media (max-width: 500px) {
     .Help{
-        display: none;
+        h1{
+            font-size: 32px;
+            line-height: 114%;
+        }
+        margin-top: 0;
+
+        p {
+            font-size: 17px;
+            line-height: 145%; 
+        }
     }
 }

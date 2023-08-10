@@ -282,7 +282,7 @@
         }
     }
 }
-@media (max-width: 1350px) and (min-width: 900px){
+@media (max-width: 1023px) and (min-width: 900px){
     .ThirdContent{
         margin-top: 100px;
         margin-bottom: 100px;
@@ -373,7 +373,29 @@
         padding: 8px;
     }
 }
-@media (max-width: 1800px) and (min-width: 1350px){
+@media (max-width: 1439px) and (min-width: 1024px){
+    .ThirdContent{
+        gap: 50px;
+    }
+    .ContentHeader{
+        font-size: 38px;
+    }
+    .ContentText{
+        font-size: 17px;
+    }
+    .ContentImg{
+        margin-left: -100px;
+        scale: calc(100 / 1.5 / 100);
+        max-width: 500px;
+        height: auto;
+        flex-shrink: 0;
+    }
+    .custom{
+        font-size: 20px;
+        gap: 13px;
+    }
+}
+@media (max-width: 1800px) and (min-width: 1440px){
     .ContentBlockText{
         max-width: 545px;
     }

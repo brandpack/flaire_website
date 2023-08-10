@@ -118,8 +118,8 @@ export const Hero: FC<HeroProps> = ({ className }) => {
             </div>
             <LazyLoadImage className={cls.img} src={HeroBgImg} alt="HeroBgImg" />
             <img className={cls.imgM} src={HeroBgImgM} alt="HeroBgImgM" />
-            <span ref={imgAnim}>
-                <LazyLoadImage  className={cls.Safari} src={Safari} alt="HeroBgImgM" />
+            <span >
+                <img  className={cls.Safari} src={Safari} alt="HeroBgImgM" />
             </span>
             <span ref={MailAnim} className={cls.Mail}><Mail /></span>
             <span ref={FileAnim} className={cls.File}><File  /></span>

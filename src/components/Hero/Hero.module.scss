@@ -1,5 +1,5 @@
 .Hero {
-    min-height: calc(100vh - var(--header-height));
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,7 +9,7 @@
 }
 
 .HeroInformation {
-    margin-top: 106px;
+    padding-top: 106px;
     z-index: 3;
     width: 514px;
     display: flex;
@@ -152,7 +152,7 @@
     }
     .HeroInformation {
         
-        margin-top: 240px;
+        padding-top: 240px;
         width: 380px;
         align-items: center;
         gap: 20px;
@@ -241,7 +241,7 @@
     }
     .HeroInformation {
         
-        margin-top: 240px;
+        padding-top: 240px;
         width: 380px;
         align-items: center;
         gap: 20px;

@@ -215,7 +215,7 @@
         line-height: normal;
     }
 }
-@media (max-width: 1024px) and (min-width: 801px) {
+@media (max-width: 1023px) and (min-width: 801px) {
     .Hear {
         padding: 47.333px 39.444px;
         height: 746px;
@@ -245,6 +245,9 @@
         width: 55%;
         height: 746px;
         padding: 47.333px 39.444px;
+        p{
+            font-size: 15px;
+        }
 
         form {
             width: 100%;
@@ -309,6 +312,7 @@
         .MessageText {
             font-size: 15px;
             line-height: 16.567px;
+            width: 100%;
             gap: 4px;
         }
 
@@ -461,12 +465,21 @@
 
 
 }
-@media (max-width: 1800px) and (min-width: 1025px) {
+@media (max-width: 1800px) and (min-width: 1024px) {
     .Hear{
+        padding: 20px 20px;
         height: 489px;
+        h1{
+            width: 100%;
+            font-size: 50px;
+        }
+        p{
+            width: 100%;
+            font-size: 17px;
+        }
     }
     .FormBlock {
-        padding: 47px 39px;
+        padding: 20px 20px;
         gap: 31px;
         height: 489px;
 
