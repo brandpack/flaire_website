@@ -323,7 +323,17 @@
         display: none;
     }
 }
-@media (max-width: 1024px) and (min-width: 900px) {
+@media (max-width: 1399px) and (min-width: 1100px){
+    
+.HeroText{
+    scale: 1.2;
+}
+.Button{
+    margin-top: 10px;
+    scale: 1.1;
+}
+}
+@media (max-width: 1399px) and (min-width: 900px) {
     .Hero{
         gap: 135px;
     }
@@ -418,7 +428,7 @@
         }
     }
 }
-@media (max-width: 1440px) and (min-width: 1025px){
+@media (max-width: 1440px) and (min-width: 1400px){
     .Hero{
         gap: 70px;
     }
