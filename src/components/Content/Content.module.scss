@@ -452,6 +452,11 @@
         gap: 13px;
     }
 }
+@media (min-width: 1440px){
+    .Content{
+        min-height: 80vh;
+    }
+}
 @media (max-width: 1800px) and (min-width: 1440px){
     .Content{
         justify-content: flex-start;
