@@ -391,6 +391,8 @@
 }
 @media (max-width: 1439px) and (min-width: 1024px){
     .FirstContent{
+        min-height: 80vh;
+
         gap: 50px;
     }
     .ContentHeader{
@@ -414,6 +416,7 @@
 @media (max-width: 1800px) and (min-width: 1440px){
     .FirstContent{
         justify-content: space-around;
+        min-height: 80vh;
     }
     .ContentHeader{
         font-size: 38px;

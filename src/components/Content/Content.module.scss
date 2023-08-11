@@ -433,6 +433,7 @@
 @media (max-width: 1439px) and (min-width: 1024px){
     .Content{
         // gap: 50px;
+        min-height: 80vh;
     }
     .ContentHeader{
         font-size: 38px;
@@ -455,6 +456,8 @@
 @media (max-width: 1800px) and (min-width: 1440px){
     .Content{
         justify-content: flex-start;
+        min-height: 80vh;
+
     }
     .ContentBlockText{
         width: 40%;
