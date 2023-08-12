@@ -29,7 +29,7 @@ const HeaderLinks = [
         dropdownItems: [
             {
                 id: 5,
-                text: 'Vendor managment',
+                text: 'Vendor Management',
                 link: '/team',
                 icon: <Factory />,
             },
