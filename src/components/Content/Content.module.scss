@@ -323,7 +323,7 @@
 @media (max-width: 1023px) and (min-width: 900px) {
     .Content {
         margin-top: 100px;
-        flex-direction: column-reverse;
+        flex-direction: row;
         justify-content: center;
         min-height: 100vh;
         height: auto;
@@ -331,10 +331,10 @@
         &::after {
             content: "";
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 30%;
+            right: 0;
             width: 50%;
-            height: 20%;
+            height: 50%;
             border-radius: 50%;
             opacity: 0.7;
             background-image: radial-gradient(circle, rgba(113, 141, 240, 1) 0%, rgba(240, 174, 113, 1) 15%, rgba(240, 174, 113, 1) 43%, rgba(222, 113, 240, 1) 44%, rgba(109, 198, 249, 1) 70%);
@@ -347,7 +347,7 @@
         margin: 0;
         width: 100%;
         max-width: 610px;
-        text-align: center;
+        // text-align: center;
         align-items: center;
     }
 
@@ -364,68 +364,71 @@
 
     .ContentImg {
         width: 100%;
-        margin-top: 80px;
-        max-width: 763px;
-        height: 465px;
+        height: 330px;
+        display: flex;
+        align-items: center;
+        max-width: 402px;
         .MainForm{
             position: relative;
             display: flex;
-            max-width: 598px;
+            align-items: center;
+            width: 100%;
+            max-width: 500px;
             z-index: 4;
             .List {
                 z-index: 5;
-                border-radius: 20px;
-                width: 381.472px;
-                height: 305.576px;
+                border-radius: 10px;
+                width: 207.318px;
+                height: 165.253px;
                 background: linear-gradient(156deg, rgba(199, 143, 242, 0.05) 0%, rgba(100, 111, 204, 0.00) 100%), rgba(13, 15, 43, 0.40);
                 backdrop-filter: blur(10px);
             }
             .Map{
                 position: absolute;
-                width: 256.611px;
-                height: 315.202px;
-                top: 25px;
-                right: -10px;
+                width: 139.46px;
+                height: 171.302px;
+                top: 15px;
+                right: 60px;
                 box-shadow: 24.54624366760254px -22.146987915039062px 61.36560821533203px 0px rgba(33, 40, 77, 0.35);
                 backdrop-filter: blur(18.455821990966797px);
-                border-radius: 0px 17.225px 17.225px 0px;
+                border-radius: 0px 8.061px 8.061px 0px;
             }
             .SideBar{
-                border-radius: 16px;
+                border-radius: 7.488px;
                 position: absolute;
-                width: 223.889px;
-                height: 285.889px;
-                top: 30px;
-                right: -200px;
+                width: 121.676px;
+                height: 155.371px;
+                top: 25px;
+                right: 0px;
                 box-shadow: -10px 0px 100px 0px rgba(44, 33, 77, 0.30);
                 backdrop-filter: blur(23.157894134521484px);
             }
             .Alert{
                 position: absolute;
-                width: 191.905px;
-                height: 66.429px;
-                top: -55px;
-                right: -60px;
+                width: 104.294px;
+                height: 36.102px;
+                top: -30px;
+                right: 40px;
                 filter: drop-shadow(0px 0px 25.71428680419922px rgba(44, 33, 77, 0.35));
                 backdrop-filter: blur(21.428571701049805px);
-                border-radius: 16px;
+                border-radius: 7.48px;
 
             }
             .ButtonPurchase{
                 position: absolute;
-                width: 301.389px;
-                height: 65.444px;
-                bottom: -80px;
-                left: 70px;
-                //background: linear-gradient( 169deg, #7ABCEC 0%, #693EA0 100%);
-                border-radius: 16px;
+                width: 163.795px;
+                height: 35.567px;
+                bottom: -40px;
+                left: 50px;
+                backdrop-filter: blur(60px);
+                border-radius: 7.488px;
             }
             .PointerLine{
                 position: absolute;
-                width: 142.254px;
-                height: 258.979px;
-                top: -30px;
-                right: 96px;
+                width: 77.31px;
+                height: 140.747px;
+                top: -16px;
+                right: 126px;
             }
         }
     }

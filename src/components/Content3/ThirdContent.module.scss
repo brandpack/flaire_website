@@ -286,8 +286,9 @@
     .ThirdContent{
         margin-top: 100px;
         margin-bottom: 100px;
-        text-align: center;
-        flex-direction: column;
+        gap: 20px;
+        // text-align: center;
+        flex-direction: row;
         justify-content: center;
         min-height: 100vh;
         height: auto;
@@ -297,7 +298,7 @@
         margin: 0;
         width: 100%;
         max-width: 610px;
-        align-items: center;
+        // align-items: center;
     }
     .ContentHeader{
         font-size: 32px;
@@ -308,32 +309,32 @@
         line-height: 145%; 
     }
     .ContentImg {
-        width: 100%;
+        width: 50%;
         z-index: 4;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 600px;
+        height: 500px;
         flex-shrink: 0;
         .MainForm{
-            max-width: 746px;
-            height: 528px;
+            max-width: 400px;
+            height: 283.089px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             .BestSellser {
                 position: absolute;
-                max-width: 161px;
-                max-height: 346px;
-                left: -25px;
-                bottom: 50px;
+                max-width: 86.5px;
+                max-height: 185.702px;
+                left: -10px;
+                bottom: 0px;
                 backdrop-filter: blur(10px);
             }
             
             .Calendar {
-                max-width: 477.66px;
-                max-height: 391.84px;
+                max-width: 255.869px;
+                max-height: 209.898px;
                 border-radius: 20px;
                 box-shadow: 0px 20px 60px 0px rgba(5, 2, 11, 0.25);
                 backdrop-filter: blur(10px);
@@ -345,20 +346,20 @@
                 border-radius: 15px;
                 backdrop-filter: blur(25px);
                 left: 58%;
-                width: 281.176px;
-                height: 254.075px;
+                width: 150.618px;
+                height: 136.101px;
                 bottom: -20px;
             }
             
             .Sales {
                 position: absolute;
-                max-width: 281.176px;
-                max-height: 199.872px;
+                max-width: 150.618px;
+                max-height: 107.066px;
                 border-radius: 15px;
                 box-shadow: 20px 20px 70px 0px rgba(7, 3, 14, 0.15);
                 backdrop-filter: blur(50px);
-                bottom: -20px;
-                left: 80px;
+                bottom: -40px;
+                left: 60px;
             }
             
         }
