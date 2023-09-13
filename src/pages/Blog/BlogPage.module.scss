@@ -43,7 +43,7 @@
     width: 100%;
     .Header {
         grid-area: Text;
-        color: #FFF;
+        color: var(--third-color);
         font-family: Krona One;
         font-size: 70px;
         font-style: normal;
@@ -59,7 +59,7 @@
     
     
         p {
-            color: rgba(255, 255, 255, 0.67);
+            color: var(--blog-MainDate);
             font-family: Inter;
             font-size: 18px;
             font-style: normal;
@@ -70,7 +70,7 @@
         h2 {
             margin-bottom: 6px;
             align-self: stretch;
-            color: #FFF;
+            color: var(--third-color);
             font-family: Montserrat;
             font-size: 38px;
             font-weight: 400;
@@ -102,7 +102,7 @@
 .Read {
     display: flex;
     gap: 10px;
-    color: #C96EC9;
+    color: var(--blog-btn);
     font-family: Montserrat;
     font-size: 23.359px;
     font-style: normal;
@@ -125,7 +125,7 @@
         margin-top: 6px;
         opacity: 0.8999999761581421;
         align-self: stretch;
-        color: #FFF;
+        color: var(--third-color);
         font-family: Montserrat;
         font-size: 38px;
         font-weight: 400;
@@ -133,7 +133,7 @@
     }
 
     p {
-        color: rgba(255, 255, 255, 0.40);
+        color: var(--blog-date);
         font-family: Inter;
         font-size: 18px;
         font-style: normal;
@@ -164,7 +164,6 @@
         width: 100%;
         .Header {
             grid-area: Text;
-            color: #FFF;
             font-family: Krona One;
             font-size: 70px;
             font-style: normal;

@@ -4,6 +4,9 @@ import { classNames } from '../classNames/classNames';
 import HeroBgImg from '../../assets/bg.webp';
 import HeroBgImgM from '../../assets/BgImgM.webp';
 import Safari from '../../assets/DashbordSafari.webp';
+import HeroBgImgW from '../../assets/bgW.webp';
+import HeroBgImgMW from '../../assets/BgImgMW.webp';
+import SafariW from '../../assets/DashbordSafariW.webp';
 
 import { ReactComponent as Mail } from '../../assets/mail.svg';
 import { ReactComponent as File } from '../../assets/file.svg';
@@ -13,18 +16,30 @@ import { ReactComponent as Calendar } from '../../assets/calendar.svg';
 import { ReactComponent as Dollar } from '../../assets/dollar.svg';
 import { ReactComponent as Photo } from '../../assets/photo.svg';
 import { ReactComponent as Chart } from '../../assets/chart.svg';
+// White
+import { ReactComponent as MailW } from '../../assets/mailW.svg';
+import { ReactComponent as FileW } from '../../assets/fileW.svg';
+import { ReactComponent as ContactW } from '../../assets/contactW.svg';
+import { ReactComponent as AnalyticsW } from '../../assets/analyticsW.svg';
+import { ReactComponent as CalendarW } from '../../assets/calendarW.svg';
+import { ReactComponent as DollarW } from '../../assets/dollarW.svg';
+import { ReactComponent as PhotoW } from '../../assets/photoW.svg';
+import { ReactComponent as ChartW } from '../../assets/chartW.svg';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Power0, gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { HashLink } from 'react-router-hash-link';
+import { useTheme } from '../ThemeChanger/lib/UseTheme';
+import { Theme } from '../ThemeChanger/lib/ThemeContext';
 
 
 
 interface HeroProps {
     className?: string;
-    
+
 }
 export const Hero: FC<HeroProps> = ({ className }) => {
+    const { theme } = useTheme();
     const MailAnim = useRef(null);
     const FileAnim = useRef(null);
     const ContactAnim = useRef(null);
@@ -37,20 +52,7 @@ export const Hero: FC<HeroProps> = ({ className }) => {
     const imgAnim = useRef(null);
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-        // gsap.fromTo(HeroAnim.current, {
-        //     y: 100,
-        //     opacity: 0,
-        //     // zIndex: 3,
-        //     ease: Power0.easeInOut,
-        //     duration: 0.5
-        // },
-        // {
-        //     y: 0,
-        //     opacity: 1,
-        //     ease: Power0.easeInOut,
-        //     duration: 0.8
-        // });
-        gsap.to([MailAnim.current,FileAnim.current,ContactAnim.current,AnalyticsAnim.current], {
+        gsap.to([MailAnim.current, FileAnim.current, ContactAnim.current, AnalyticsAnim.current], {
             x: -1000,
             y: -1000,
             opacity: 0,
@@ -63,7 +65,7 @@ export const Hero: FC<HeroProps> = ({ className }) => {
             },
             ease: Power0.easeInOut
         });
-        gsap.to([CalendarAnim.current,DollarAnim.current,PhotoAnim.current,ChartAnim.current], {
+        gsap.to([CalendarAnim.current, DollarAnim.current, PhotoAnim.current, ChartAnim.current], {
             x: 1000,
             y: -1000,
             opacity: 0,
@@ -116,20 +118,46 @@ export const Hero: FC<HeroProps> = ({ className }) => {
                 </div>
                 <HashLink className={cls.Button} smooth to={'/#calendar'} >GET STARTED</HashLink>
             </div>
-            <LazyLoadImage className={cls.img} src={HeroBgImg} alt="HeroBgImg" />
-            <img className={cls.imgM} src={HeroBgImgM} alt="HeroBgImgM" />
-            <span >
-                <img  className={cls.Safari} src={Safari} alt="HeroBgImgM" />
-            </span>
-            <span ref={MailAnim} className={cls.Mail}><Mail /></span>
-            <span ref={FileAnim} className={cls.File}><File  /></span>
-            <span ref={ContactAnim} className={cls.Contact}><Contact  /></span>
-            <span ref={AnalyticsAnim} className={cls.Analytics} ><Analytics  /></span>
-            <span ref={CalendarAnim} className={cls.Calendar}><Calendar  /></span>
-            <span ref={DollarAnim} className={cls.Dollar}><Dollar  /></span>
-            <span ref={PhotoAnim} className={cls.Photo}><Photo  /></span>
-            <span ref={ChartAnim} className={cls.Chart}><Chart  /></span>
-            
+            {theme === Theme.DARK ?
+                <>
+                    <LazyLoadImage className={cls.img} src={HeroBgImg} alt="HeroBgImg" />
+                    <LazyLoadImage className={cls.imgM} src={HeroBgImgM} alt="HeroBgImgM" />
+                    <span >
+                        <img className={cls.Safari} src={Safari} alt="Safari showcase" />
+                    </span>
+                </>
+                :
+                <>
+                    <LazyLoadImage className={cls.img} src={HeroBgImgW} alt="HeroBgImg" />
+                    <LazyLoadImage className={cls.imgM} src={HeroBgImgMW} alt="HeroBgImgM" />
+                    <span >
+                        <img className={cls.Safari} src={SafariW} alt="Safari showcase" />
+                    </span>
+                </>
+            }
+            {theme === Theme.DARK ?
+                <>
+                    <span ref={MailAnim} className={cls.Mail}><Mail /></span>
+                    <span ref={FileAnim} className={cls.File}><File /></span>
+                    <span ref={ContactAnim} className={cls.Contact}><Contact /></span>
+                    <span ref={AnalyticsAnim} className={cls.Analytics} ><Analytics /></span>
+                    <span ref={CalendarAnim} className={cls.Calendar}><Calendar /></span>
+                    <span ref={DollarAnim} className={cls.Dollar}><Dollar /></span>
+                    <span ref={PhotoAnim} className={cls.Photo}><Photo /></span>
+                    <span ref={ChartAnim} className={cls.Chart}><Chart /></span>
+                </>
+                :
+                <>
+                    <span ref={MailAnim} className={cls.Mail}><MailW /></span>
+                    <span ref={FileAnim} className={cls.File}><FileW /></span>
+                    <span ref={ContactAnim} className={cls.Contact}><ContactW /></span>
+                    <span ref={AnalyticsAnim} className={cls.Analytics} ><AnalyticsW /></span>
+                    <span ref={CalendarAnim} className={cls.Calendar}><CalendarW /></span>
+                    <span ref={DollarAnim} className={cls.Dollar}><DollarW /></span>
+                    <span ref={PhotoAnim} className={cls.Photo}><PhotoW /></span>
+                    <span ref={ChartAnim} className={cls.Chart}><ChartW /></span>
+                </>
+            }
         </div>
     )
 }

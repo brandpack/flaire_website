@@ -5,9 +5,16 @@ import { ReactComponent as BestSellser } from '../../assets/best-sellers.svg';
 import { ReactComponent as Calendar } from '../../assets/Calendar2.svg';
 import { ReactComponent as FutureCash } from '../../assets/FutureCash.svg';
 import { ReactComponent as Sales } from '../../assets/Sales.svg';
+// White
+import { ReactComponent as BestSellserW } from '../../assets/best-sellersW.svg';
+import { ReactComponent as CalendarW } from '../../assets/Calendar2W.svg';
+import { ReactComponent as FutureCashW } from '../../assets/FutureCashW.svg';
+import { ReactComponent as SalesW } from '../../assets/SalesW.svg';
 import { Power0, gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import { Theme } from '../ThemeChanger/lib/ThemeContext';
+import { useTheme } from '../ThemeChanger/lib/UseTheme';
 
 interface ThirdContentProps {
     className?: string;
@@ -15,6 +22,7 @@ interface ThirdContentProps {
 gsap.registerPlugin(ScrollTrigger);
 export const ThirdContent: FC<ThirdContentProps> = ({ className }) => {
     const ContentAnim = useRef(null);
+    const { theme } = useTheme();
     const isMobile = window.innerWidth <= 825;
     useEffect(() => {
         // Получаем ссылку на блок, который будем анимировать
@@ -51,16 +59,30 @@ export const ThirdContent: FC<ThirdContentProps> = ({ className }) => {
     }, []);
     return (
         <div className={classNames(cls.ThirdContent, {}, [className])}>
-            <LazyLoadComponent>
-                <div className={cls.ContentImg}>
-                    <div className={cls.MainForm}>
-                        <BestSellser className={cls.BestSellser} />
-                        <Calendar className={cls.Calendar} />
-                        <FutureCash className={cls.FutureCash} />
-                        <Sales className={cls.Sales} />
+            {theme === Theme.DARK ?
+                <LazyLoadComponent>
+                    <div className={cls.ContentImg}>
+                        <div className={cls.MainForm}>
+                            <BestSellser className={cls.BestSellser} />
+                            <Calendar className={cls.Calendar} />
+                            <FutureCash className={cls.FutureCash} />
+                            <Sales className={cls.Sales} />
+                        </div>
                     </div>
-                </div>
-            </LazyLoadComponent>
+                </LazyLoadComponent>
+                :
+                <LazyLoadComponent>
+                    <div className={cls.ContentImg}>
+                        <div className={cls.MainForm}>
+                            <BestSellserW className={cls.BestSellser} />
+                            <CalendarW className={cls.Calendar} />
+                            <FutureCashW className={cls.FutureCash} />
+                            <SalesW className={cls.Sales} />
+                        </div>
+                    </div>
+                </LazyLoadComponent>
+            }
+
             <div ref={ContentAnim} className={cls.ContentBlockText}>
                 <h1 className={cls.ContentHeader}>
                     Centralize data and use AI to make faster, more informed decisions

@@ -19,7 +19,7 @@
 
 .Hear {
     height: 100%;
-    background-image: linear-gradient(135deg, rgba(102, 110, 181, 0.11) 0%, rgba(77, 80, 114, 0.15) 100%);
+    background: var(--calendar-bg);
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -30,18 +30,19 @@
     border-radius: 30px 0px 0px 30px;
     .HearMain{
         h1 {
-            width: 550px;
-            color: #fff;
+            width: 460px;
+            color: var(--primary-color);
             font-family: Montserrat;
             font-size: 54px;
             font-style: normal;
             font-weight: 500;
             line-height: 114%;
+            margin-bottom: 13px;
         }
     
         p {
             width: 425px;
-            color: rgba(170, 167, 207, 0.70);
+            color: var(--secondary-color);
             font-family: Inter;
             font-size: 22px;
             font-weight: 400;
@@ -60,7 +61,7 @@
         height: 2px;
         width: 100%;
         opacity: 0.20000000298023224;
-        background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+        background: var(--calendar-line);
     }
 }
 
@@ -72,7 +73,7 @@
     gap: 39px;
     overflow: hidden;
     border-radius: 0px 30px 30px 0px;
-    background-color: #1a1e3e;
+    background-color: var(--calendar-form-bg);
 }
 
 @media (max-width: 800px) {
@@ -108,7 +109,6 @@
         }
 
         p {
-            color: #FFF;
             width: 100%;
             font-size: 17px;
             line-height: 145%;

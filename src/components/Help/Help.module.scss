@@ -7,7 +7,7 @@
     align-items: center;
     h1{
     align-self: stretch;
-    color: #FFF;
+    color: var(--primary-color);
     font-family: Montserrat;
     font-size: 46px;
     font-style: normal;
@@ -18,7 +18,7 @@
     p{
         max-width: 931px;
         text-align: center;
-        color: rgba(147, 145, 177, 0.70);
+        color: var(--help-color);
         font-family: Inter;
         font-size: 22px;
         font-weight: 400;

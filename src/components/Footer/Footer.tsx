@@ -2,22 +2,33 @@ import { FC } from 'react'
 import cls from './Footer.module.scss'
 import { classNames } from '../classNames/classNames';
 import { ReactComponent as Logo } from '../../assets/mark.svg';
+import { ReactComponent as LogoW } from '../../assets/markW.svg';
 import { ReactComponent as Mark } from '../../assets/sign.svg';
 import { ReactComponent as LinkedIn } from '../../assets/linkedin.svg';
+import { ReactComponent as LinkedInW } from '../../assets/linkedinW.svg';
 import { ReactComponent as Line } from '../../assets/line.svg';
+import { ReactComponent as LineW } from '../../assets/lineW.svg';
 
 
 import { AppLink, AppLinkTheme } from '../AppLink/AppLink';
+import { useTheme } from '../ThemeChanger/lib/UseTheme';
+import { Theme } from '../ThemeChanger/lib/ThemeContext';
 
 interface FooterProps {
     className?: string;
 }
 
 export const Footer: FC<FooterProps> = ({ className }) => {
+    const { theme } = useTheme();
     return (
         <footer id='Footer' className={classNames(cls.Footer, {}, [className])}>
             <div className={cls.Information}>
-                <AppLink to={'/'} ><Logo className={cls.Mark} /></AppLink>
+                {theme === Theme.DARK ?
+                    <AppLink to={'/'} ><Logo className={cls.Mark} /></AppLink>
+
+                    :
+                    <AppLink to={'/'} ><LogoW className={cls.Mark} /></AppLink>
+                }
                 <div className={cls.LinksContainer}>
                     <div className={cls.Links}>
                         <h1 className={cls.LinkHeader}>Product</h1>
@@ -59,16 +70,31 @@ export const Footer: FC<FooterProps> = ({ className }) => {
                             Designed by brandpack
                         </AppLink>
                     </p>
-                    <div className={cls.socials} >
-                        <Line />
-                        <AppLink
-                            to={'https://www.linkedin.com/company/flaire-software'}
-                            theme={AppLinkTheme.PRIMARY}
-                            target='_blank'
-                        >
-                            <LinkedIn />
-                        </AppLink>
-                    </div>
+                    {theme === Theme.DARK ?
+
+                        <div className={cls.socials} >
+                            <Line />
+                            <AppLink
+                                to={'https://www.linkedin.com/company/flaire-software'}
+                                theme={AppLinkTheme.PRIMARY}
+                                target='_blank'
+                            >
+                                <LinkedIn />
+                            </AppLink>
+                        </div>
+                        :
+                        <div className={cls.socials} >
+                            <LineW />
+                            <AppLink
+                                to={'https://www.linkedin.com/company/flaire-software'}
+                                theme={AppLinkTheme.PRIMARY}
+                                target='_blank'
+                            >
+                                <LinkedInW />
+                            </AppLink>
+                        </div>
+                    }
+
                 </div>
             </div>
         </footer>

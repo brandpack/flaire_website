@@ -5,7 +5,6 @@ import { AppLink } from '../AppLink/AppLink';
 import emailjs from '@emailjs/browser';
 import Notification from '../Notification/Notification';
 
-
 interface FormProps {
     className?: string;
 }
@@ -13,7 +12,6 @@ interface FormProps {
 export const FormContent: FC<FormProps> = ({ className }) => {
     const form = useRef<HTMLFormElement>(null);
     const [notificationMessage, setNotificationMessage] = useState('');
-
     const handleNotificationClose = () => {
         setNotificationMessage('');
     };

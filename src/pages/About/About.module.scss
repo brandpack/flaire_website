@@ -38,7 +38,7 @@
         max-width: 720px;
         width: 100%;
         text-align: left;
-        color: #FFF;
+        color: var(--third-color);
         font-family: Krona One;
         font-size: 90px;
         font-style: normal;
@@ -49,7 +49,7 @@
     h2 {
         width: 100%;
         max-width: 720px;
-        color: #C479FF;
+        color: var(--our-mission);
         font-family: Montserrat;
         font-size: 40px;
         font-style: normal;
@@ -63,7 +63,7 @@
     h3 {
         width: 100%;
         max-width: 720px;
-        color: #C6B5F1;
+        color: var(--about-h3);
         font-family: Inter;
         font-size: 30px;
         font-style: normal;
@@ -73,7 +73,7 @@
     }
 
     p {
-        color: rgba(171, 168, 201, 0.75);
+        color: var(--about-p);
         /* Desktop/Text */
         font-family: Inter;
         font-size: 22px;
@@ -106,7 +106,7 @@
     }
 
     h1 {
-        color: #C4BBDF;
+        color: var(--about-smartest);
         text-align: center;
         font-family: Montserrat;
         font-size: 30px;
@@ -120,19 +120,16 @@
     .container {
         gap: 35px;
         h1 {
-            color: #FFF;
             font-family: Krona One;
             font-size: 48px;
         }
 
         h2 {
-            color: #C479FF;
             font-family: Montserrat;
             font-size: 26px;
         }
 
         h3 {
-            color: #C6B5F1;
             font-family: Inter;
             font-size: 22px;
         }
@@ -148,7 +145,6 @@
 
     .smartest {
         h1 {
-            color: #C4BBDF;
             text-align: center;
             font-family: Montserrat;
             font-size: 20px;

@@ -17,8 +17,10 @@
     align-items: center;
     gap: 20px;
     grid-area: a;
+    opacity: 0.2;
+
     svg {
-        opacity: 0.3;
+        fill: var(--footer-sign);
     }
 }
 
@@ -45,7 +47,7 @@
     flex-shrink: 0;
 
     a {
-        color: rgba(255, 255, 255, 0.50);
+        color: var(--footer-link);
         font-family: Inter;
         font-size: 18px;
         font-style: normal;
@@ -55,7 +57,7 @@
 }
 
 .LinkHeader {
-    color: #FFF;
+    color: var(--footer-Hlink);
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
@@ -81,7 +83,7 @@
     grid-template-columns: 30% auto 30%;
     grid-template-areas: "a b c" ;
     justify-content: space-between;
-    opacity: 0.5;
+    // opacity: 0.5;
 }
 
 .col {
@@ -94,7 +96,7 @@
 }
 
 .Copyright {
-    color: rgba(255, 255, 255, 0.45);
+    color: var(--footer-copyright);
     display: flex;
     align-items: flex-start;
     font-family: Inter;
@@ -116,7 +118,7 @@
 .UndercardText {
     align-self: center;
     a{
-        color: rgba(255, 255, 255, 0.45);
+        color: var(--footer-brandpack);
         font-family: Inter;
         font-size: 16px;
         font-style: normal;
@@ -127,7 +129,7 @@
 }
 
 .UndercardTextFirst {
-    color: rgba(255, 255, 255, 0.30);
+    color: var(--footer-Spsheet);
     font-family: Inter;
     font-size: 16px;
     font-style: normal;

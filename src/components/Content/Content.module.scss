@@ -34,7 +34,7 @@
 }
 
 .ContentHeader {
-    color: #FFF;
+    color: var(--primary-color);
     font-family: Montserrat;
     font-size: 54px;
     font-style: normal;
@@ -44,7 +44,7 @@
 }
 
 .ContentText {
-    color: rgba(147, 145, 177, 0.70);
+    color: var(--secondary-color);
     max-width: 566px;
     font-family: Inter;
     font-size: 22px;
@@ -64,14 +64,16 @@
         .List {
             z-index: 5;
             border-radius: 20px;
-            background: linear-gradient(156deg, rgba(199, 143, 242, 0.05) 0%, rgba(100, 111, 204, 0.00) 100%), rgba(13, 15, 43, 0.40);
+            background: var(--list-bg);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
         }
         .Map{
             position: absolute;
             top: 50px;
             right: -100px;
-            box-shadow: 24.54624366760254px -22.146987915039062px 61.36560821533203px 0px rgba(33, 40, 77, 0.35);
+            -webkit-box-shadow: var(--map-shadow);
+            box-shadow: var(--map-shadow);
             backdrop-filter: blur(18.455821990966797px);
             border-radius: 0px 17.225px 17.225px 0px;
         }
@@ -80,14 +82,17 @@
             position: absolute;
             top: 60px;
             right: -200px;
-            box-shadow: -10px 0px 100px 0px rgba(44, 33, 77, 0.30);
+            -webkit-box-shadow: var(--sidebar-shadow);
+            box-shadow: var(--sidebar-shadow);
+            -webkit-backdrop-filter: blur(23.157894134521484px);
             backdrop-filter: blur(23.157894134521484px);
         }
         .Alert{
             position: absolute;
             top: -65px;
             right: -155px;
-            filter: drop-shadow(0px 0px 25.71428680419922px rgba(44, 33, 77, 0.35));
+            filter: var(--alert-shadow);
+            -webkit-backdrop-filter: blur(21.428571701049805px);
             backdrop-filter: blur(21.428571701049805px);
         }
         .ButtonPurchase{
@@ -159,8 +164,6 @@
                 border-radius: 10px;
                 width: 207.318px;
                 height: 165.253px;
-                background: linear-gradient(156deg, rgba(199, 143, 242, 0.05) 0%, rgba(100, 111, 204, 0.00) 100%), rgba(13, 15, 43, 0.40);
-                backdrop-filter: blur(10px);
             }
             .Map{
                 position: absolute;
@@ -168,8 +171,6 @@
                 height: 171.302px;
                 top: 15px;
                 right: 60px;
-                box-shadow: 24.54624366760254px -22.146987915039062px 61.36560821533203px 0px rgba(33, 40, 77, 0.35);
-                backdrop-filter: blur(18.455821990966797px);
                 border-radius: 0px 8.061px 8.061px 0px;
             }
             .SideBar{
@@ -179,8 +180,6 @@
                 height: 155.371px;
                 top: 25px;
                 right: 0px;
-                box-shadow: -10px 0px 100px 0px rgba(44, 33, 77, 0.30);
-                backdrop-filter: blur(23.157894134521484px);
             }
             .Alert{
                 position: absolute;
@@ -188,8 +187,6 @@
                 height: 36.102px;
                 top: -30px;
                 right: 30px;
-                filter: drop-shadow(0px 0px 25.71428680419922px rgba(44, 33, 77, 0.35));
-                backdrop-filter: blur(21.428571701049805px);
                 border-radius: 7.48px;
 
             }
@@ -199,7 +196,6 @@
                 height: 35.567px;
                 bottom: -40px;
                 left: 50px;
-                backdrop-filter: blur(60px);
                 border-radius: 7.488px;
             }
             .PointerLine{
@@ -267,8 +263,6 @@
                 border-radius: 10px;
                 width: 207.318px;
                 height: 165.253px;
-                background: linear-gradient(156deg, rgba(199, 143, 242, 0.05) 0%, rgba(100, 111, 204, 0.00) 100%), rgba(13, 15, 43, 0.40);
-                backdrop-filter: blur(10px);
             }
             .Map{
                 position: absolute;
@@ -276,8 +270,6 @@
                 height: 171.302px;
                 top: 15px;
                 right: 60px;
-                box-shadow: 24.54624366760254px -22.146987915039062px 61.36560821533203px 0px rgba(33, 40, 77, 0.35);
-                backdrop-filter: blur(18.455821990966797px);
                 border-radius: 0px 8.061px 8.061px 0px;
             }
             .SideBar{
@@ -287,8 +279,6 @@
                 height: 155.371px;
                 top: 25px;
                 right: 0px;
-                box-shadow: -10px 0px 100px 0px rgba(44, 33, 77, 0.30);
-                backdrop-filter: blur(23.157894134521484px);
             }
             .Alert{
                 position: absolute;
@@ -296,8 +286,6 @@
                 height: 36.102px;
                 top: -30px;
                 right: 40px;
-                filter: drop-shadow(0px 0px 25.71428680419922px rgba(44, 33, 77, 0.35));
-                backdrop-filter: blur(21.428571701049805px);
                 border-radius: 7.48px;
 
             }
@@ -307,7 +295,6 @@
                 height: 35.567px;
                 bottom: -40px;
                 left: 50px;
-                backdrop-filter: blur(60px);
                 border-radius: 7.488px;
             }
             .PointerLine{
@@ -380,8 +367,6 @@
                 border-radius: 10px;
                 width: 207.318px;
                 height: 165.253px;
-                background: linear-gradient(156deg, rgba(199, 143, 242, 0.05) 0%, rgba(100, 111, 204, 0.00) 100%), rgba(13, 15, 43, 0.40);
-                backdrop-filter: blur(10px);
             }
             .Map{
                 position: absolute;
@@ -389,8 +374,6 @@
                 height: 171.302px;
                 top: 15px;
                 right: 60px;
-                box-shadow: 24.54624366760254px -22.146987915039062px 61.36560821533203px 0px rgba(33, 40, 77, 0.35);
-                backdrop-filter: blur(18.455821990966797px);
                 border-radius: 0px 8.061px 8.061px 0px;
             }
             .SideBar{
@@ -400,8 +383,6 @@
                 height: 155.371px;
                 top: 25px;
                 right: 0px;
-                box-shadow: -10px 0px 100px 0px rgba(44, 33, 77, 0.30);
-                backdrop-filter: blur(23.157894134521484px);
             }
             .Alert{
                 position: absolute;
@@ -409,8 +390,6 @@
                 height: 36.102px;
                 top: -30px;
                 right: 40px;
-                filter: drop-shadow(0px 0px 25.71428680419922px rgba(44, 33, 77, 0.35));
-                backdrop-filter: blur(21.428571701049805px);
                 border-radius: 7.48px;
 
             }
@@ -420,6 +399,7 @@
                 height: 35.567px;
                 bottom: -40px;
                 left: 50px;
+                -webkit-backdrop-filter: blur(60px);
                 backdrop-filter: blur(60px);
                 border-radius: 7.488px;
             }

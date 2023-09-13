@@ -7,8 +7,8 @@
     z-index: -1;
     font-size: var(--font-size-s);
     border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.10);
-    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--header-menuBorder);
+    background: var(--header-menuBg);
     backdrop-filter: blur(30px);
     position: relative;
     padding: 12px 20px;
@@ -16,7 +16,7 @@
 }
 
 .MenuLink {
-    color: rgba(230, 227, 251, 0.70);
+    color: var(--header-menu-color);
     font-family: Inter;
     font-size: 18px;
     font-style: normal;
@@ -36,37 +36,31 @@
     column-gap: 15px;
     flex-direction: column;
     border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.10);
-    background: rgba(27, 31, 54, 0.98);
-    // backdrop-filter: blur(25px);
-    /* Make sure the dropdown appears above the menu */
+    border: 1px solid var(--header-menuBorder);
+    background: var(--header-dropdownContent);
     min-width: 150px;
     max-width: 925px;
-    /* Set the minimum width of the dropdown */
 }
 .Open {
     display: grid;
     position: absolute;
     z-index: 1;
     top: 150%;
-    /* Position the dropdown below the menu */
     left: -60%;
     padding: 20px;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 15px;
     flex-direction: column;
     border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.10);
-    background: rgba(27, 31, 54, 0.98);
-    // backdrop-filter: blur(25px);
-    /* Make sure the dropdown appears above the menu */
+    border: 1px solid var(--header-menuBorder);
+    background: var(--header-dropdownContent);
     min-width: 150px;
     max-width: 925px;
 }
 
 
 .DropdownLink {
-    color: rgba(230, 227, 251, 0.70);
+    color: var(--header-menu-color);
     position: relative;
     font-family: Inter;
     font-size: 18px;
@@ -121,7 +115,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         transition: all 0.3s;
-        background: #03020C;
+        background: var(--header-menu-colorBg);
         overflow-y: scroll;
     }
     .Mobile{
@@ -129,7 +123,7 @@
         flex-direction: column;
         font-family: Montserrat;
         font-size: 32px;
-        color: #fff;
+        color: var(--third-color);
 
 
         .DropdownContent{
@@ -145,7 +139,7 @@
 
         }
         .DropdownLink {
-            color: rgba(230, 227, 251, 0.70);
+            color: var(--third-color);
             padding: 0;
             position: relative;
             font-family: Montserrat;
@@ -192,6 +186,6 @@
         justify-content: flex-start;
 
         align-items: flex-start;
-        background: #03020C;
+        background: var(--header-menu-colorBg);
     }
 }

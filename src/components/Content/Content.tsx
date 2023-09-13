@@ -7,9 +7,18 @@ import { ReactComponent as List } from '../../assets/List.svg';
 import { ReactComponent as Map } from '../../assets/Map.svg';
 import { ReactComponent as PointerLine } from '../../assets/pointerLine.svg';
 import { ReactComponent as SideBar } from '../../assets/SideBar.svg';
+//White
+import { ReactComponent as AlertW } from '../../assets/AlertW.svg';
+import { ReactComponent as ButtonPurchaseW } from '../../assets/ButtonPuchaseW.svg';
+import { ReactComponent as ListW } from '../../assets/ListW.svg';
+import { ReactComponent as MapW } from '../../assets/MapW.svg';
+import { ReactComponent as PointerLineW } from '../../assets/pointerLineW.svg';
+import { ReactComponent as SideBarW } from '../../assets/SideBarW.svg';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Power0, gsap } from 'gsap';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import { useTheme } from '../ThemeChanger/lib/UseTheme';
+import { Theme } from '../ThemeChanger/lib/ThemeContext';
 interface ContentProps {
     className?: string;
 }
@@ -17,6 +26,7 @@ interface ContentProps {
 gsap.registerPlugin(ScrollTrigger);
 export const Content: FC<ContentProps> = ({ className }) => {
     const ContentAnim = useRef(null);
+    const { theme } = useTheme();
     const isMobile = window.innerWidth <= 825;
     useEffect(() => {
         // Получаем ссылку на блок, который будем анимировать
@@ -60,8 +70,8 @@ export const Content: FC<ContentProps> = ({ className }) => {
                     supply chain
                 </h1>
                 <p className={cls.ContentText} >
-                    Easily manage products, orders and POs in a single
-                    system — no more shuffling between emails,
+                    Easily manage SKUs, customer orders, and POs in a 
+                    single system — no more shuffling between emails,
                     spreadsheets, and other disjointed tools.
                 </p>
                 <p className={cls.ContentText} >
@@ -70,18 +80,34 @@ export const Content: FC<ContentProps> = ({ className }) => {
                     up-to-date, and use activity streams for accountability.
                 </p>
             </div>
-            <LazyLoadComponent>
-                <div className={cls.ContentImg}>
-                    <div className={cls.MainForm}>
-                        <Map className={cls.Map} />
-                        <SideBar className={cls.SideBar} />
-                        <List className={cls.List} />
-                        <PointerLine className={cls.PointerLine} />
-                        <Alert className={cls.Alert} />
-                        <ButtonPurchase className={cls.ButtonPurchase} />
+            {theme === Theme.DARK ?
+                <LazyLoadComponent>
+                    <div className={cls.ContentImg}>
+                        <div className={cls.MainForm}>
+                            <Map className={cls.Map} />
+                            <SideBar className={cls.SideBar} />
+                            <List className={cls.List} />
+                            <PointerLine className={cls.PointerLine} />
+                            <Alert className={cls.Alert} />
+                            <ButtonPurchase className={cls.ButtonPurchase} />
+                        </div>
                     </div>
-                </div>
-            </LazyLoadComponent>
+                </LazyLoadComponent>
+                :
+                <LazyLoadComponent>
+                    <div className={cls.ContentImg}>
+                        <div className={cls.MainForm}>
+                            <MapW className={cls.Map} />
+                            <SideBarW className={cls.SideBar} />
+                            <ListW className={cls.List} />
+                            <PointerLineW className={cls.PointerLine} />
+                            <AlertW className={cls.Alert} />
+                            <ButtonPurchaseW className={cls.ButtonPurchase} />
+                        </div>
+                    </div>
+                </LazyLoadComponent>
+            }
+
 
         </div>
     )

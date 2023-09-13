@@ -37,7 +37,7 @@
 }
 
 .ContentHeader {
-    color: #FFF;
+    color: var(--primary-color);
     font-family: Montserrat;
     font-size: 54px;
     font-style: normal;
@@ -46,7 +46,7 @@
 }
 
 .ContentText {
-    color: rgba(147, 145, 177, 0.70);
+    color: var(--secondary-color);
 
     font-family: Inter;
     font-size: 22px;
@@ -64,24 +64,27 @@
         width: 700px;
         position: relative;
     }
+
     .AutoEmail{
         position: absolute;
         bottom: -40px;
         left: -60px;
         backdrop-filter: blur(25px);
         border-radius: 18.864px;
-        filter: box-shadow (30px 20px 75px rgba(44, 33, 77, 0.29));
+        filter: var(--autoMail-shadow);
         
     }
+
     .MailForm{
         backdrop-filter: blur(10px);
     }
+
     .Files{
         position: absolute;
         border-radius: 18.864px;
         bottom: 90px;
         right: 20px;
-        box-shadow: 18.863636016845703px 37.727272033691406px 47.15909194946289px 0px rgba(44, 33, 77, 0.20);
+        box-shadow: var(--files-shadow);
         backdrop-filter: blur(23.579545974731445px);
     }
 }
@@ -182,8 +185,6 @@
             left: 0px;
             backdrop-filter: blur(25px);
             border-radius: 10.196px;
-            filter: box-shadow (30px 20px 75px rgba(44, 33, 77, 0.29));
-            
         }
         .MailForm{
             backdrop-filter: blur(10px);
@@ -197,7 +198,6 @@
             border-radius: 10.196px;
             bottom: 45px;
             right: 0px;
-            box-shadow: 18.863636016845703px 37.727272033691406px 47.15909194946289px 0px rgba(44, 33, 77, 0.20);
             backdrop-filter: blur(23.579545974731445px);
         }
     }
@@ -269,8 +269,6 @@
             left: 120px;
             backdrop-filter: blur(25px);
             border-radius: 10.196px;
-            filter: box-shadow (30px 20px 75px rgba(44, 33, 77, 0.29));
-            
         }
         .MailForm{
             backdrop-filter: blur(10px);
@@ -284,7 +282,6 @@
             border-radius: 10.196px;
             bottom: 45px;
             right: 60px;
-            box-shadow: 18.863636016845703px 37.727272033691406px 47.15909194946289px 0px rgba(44, 33, 77, 0.20);
             backdrop-filter: blur(23.579545974731445px);
         }
     }
@@ -359,9 +356,7 @@
             bottom: -20px;
             left: 20px;
             backdrop-filter: blur(25px);
-            border-radius: 10.196px;
-            filter: box-shadow (30px 20px 75px rgba(44, 33, 77, 0.29));
-            
+            border-radius: 10.196px;            
         }
         .MailForm{
             backdrop-filter: blur(10px);
@@ -375,7 +370,6 @@
             border-radius: 10.196px;
             bottom: 40px;
             right: 20px;
-            box-shadow: 18.863636016845703px 37.727272033691406px 47.15909194946289px 0px rgba(44, 33, 77, 0.20);
             backdrop-filter: blur(23.579545974731445px);
         }
     }

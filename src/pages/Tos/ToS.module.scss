@@ -9,12 +9,12 @@
     align-self: center;
     text-align: justify;
     b{
-        color: #FFF;
+        color: var(--third-color);
     }
     h1 {
         width: 100%;
         text-align: left;
-        color: #FFF;
+        color: var(--third-color);
         font-family: Krona One;
         font-size: 38px;
         font-style: normal;
@@ -25,7 +25,7 @@
     h2 {
         width: 100%;
         text-align: left;
-        color: #FFF;
+        color: var(--third-color);
         font-family: Montserrat;
         font-size: 38px;
         font-style: normal;
@@ -36,7 +36,7 @@
     p {
         margin-top: 20px;
         padding-left: 33px;
-        color: rgba(171, 168, 201, 0.75);
+        color: var(--tos-text);
         font-family: Inter;
         font-size: 22px;
         font-style: normal;
@@ -48,7 +48,7 @@
     .container{
         margin-top: 100px;
         h2 {
-            color: #FFF;
+            color: var(--third-color);
             font-family: Montserrat;
             font-size: 32px;
             font-style: normal;
@@ -59,7 +59,7 @@
         p {
             margin-top: 20px;
             padding-left: 12px;
-            color: rgba(171, 168, 201, 0.75);
+            color: var(--tos-text);
             font-family: Inter;
             font-size: 18px;
             font-style: normal;

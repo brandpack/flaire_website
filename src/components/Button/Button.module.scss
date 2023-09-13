@@ -20,7 +20,7 @@
 .outline {
     padding: 14px 22px 14px 22px;
     border-radius: 20px;
-    border: 2px solid rgba(170, 187, 249, 0.30);
+    border: 2px solid var(--button-outline-border-color);
     color: var(--primary-color);
     background: none;
 }

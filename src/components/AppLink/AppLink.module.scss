@@ -20,7 +20,7 @@
 }
 
 .MenuLink {
-    color: rgba(230, 227, 251, 0.70);
+    color: var(--header-menu-color);
     font-family: Inter;
     font-size: 18px;
     font-style: normal;
@@ -30,13 +30,13 @@
 }
 
 .MenuLink:hover {
-    color: rgba(230, 227, 251, 1);
+    color: var(--menu-hovered-color);
 
 }
 
 @media (max-width: 900px) {
     .MenuLink {
-        color: #fff;
+        color: var(--third-color);
         text-align: center;
         font-family: Montserrat;
         font-size: 32px;

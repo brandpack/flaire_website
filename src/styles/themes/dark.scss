@@ -4,8 +4,89 @@
     --bg: #141739;
     --inverted-bg-color: #e8e8ea;
     --header-bg-color: rgba(27, 31, 54, 0.40);
+
+    // 1-3 colors
     --primary-color: #FFF;
-    --secondary-color: #04ff04;
-    --inverted-primary-color: #0232c2;
-    --inverted-secondary-color: #0452ff;
+    --secondary-color: rgba(170, 167, 207, 0.70);
+    --third-color: #FFF;
+
+    // Inverted colors
+    --inverted-primary-color: #000;
+    --inverted-secondary-color: rgba(85, 88, 48, 0.70);
+
+    // Header
+    --header-menu-color: rgba(230, 227, 251, 0.70);
+    --header-menu-colorBg: #03020C;
+    --header-menuBg: rgba(255, 255, 255, 0.05);
+    --header-menuBorder: rgba(255, 255, 255, 0.10);
+    --header-dropdownContent: rgba(27, 31, 54, 0.98);
+    --button-outline-border-color: rgba(170, 187, 249, 0.30);
+    --arrow-color: rgba(230, 227, 251, 0.7);
+
+    // Footer  
+    --footer-link: rgba(255, 255, 255, 0.50);
+    --footer-Spsheet: rgba(255, 255, 255, 0.30);
+    --footer-Hlink: #FFF;
+    --footer-copyright: rgba(255, 255, 255, 0.45);
+    --footer-sign: white;
+
+    // Hero
+    --hero-text-color: #C4BBDF;
+    --hero-bgImg-scale: 125%;
+    --hero-btn: #FFF;
+
+    // Card
+    --card-text-color: #C4BBDF;
+    --card-bg-color: linear-gradient(360deg, #141739 0%, rgba(20, 23, 57, 0.00) 100%), linear-gradient(360deg, #141739 0%, rgba(20, 23, 57, 0.00) 100%), linear-gradient(360deg, #141739 0%, rgba(20, 23, 57, 0.00) 100%), linear-gradient(360deg, #141739 0%, rgba(20, 23, 57, 0.00) 100%), linear-gradient(360deg, #141739 0%, rgba(20, 23, 57, 0.00) 100%), linear-gradient(360deg, #141739 0%, rgba(20, 23, 57, 0.00) 100%), linear-gradient(360deg, #141739 0%, rgba(20, 23, 57, 0.00) 100%);
+
+    // Help
+    --help-color: rgba(147, 145, 177, 0.70);
+
+    // Content1
+    --files-shadow: 18.863636016845703px 37.727272033691406px 47.15909194946289px 0px rgba(44, 33, 77, 0.20);
+    --autoMail-shadow: drop-shadow(30px 20px 75px rgba(44, 33, 77, 0.29));
+
+    //Content2
+    --list-bg: linear-gradient(156deg, rgba(199, 143, 242, 0.05) 0%, rgba(100, 111, 204, 0.00) 100%), rgba(13, 15, 43, 0.40);
+    --alert-shadow: drop-shadow(0px 0px 25.71428680419922px rgba(44, 33, 77, 0.35));
+    --map-shadow: 24.54624366760254px -22.146987915039062px 61.36560821533203px 0px rgba(33, 40, 77, 0.35);
+    --sidebar-shadow: -10px 0px 100px 0px rgba(44, 33, 77, 0.30);
+
+    // Content3
+    --calendar-shadow: 0px 20px 60px 0px rgba(5, 2, 11, 0.25);
+    --fCash-shadow: -20px 10px 70px 0px rgba(7, 3, 14, 0.15);
+    --sales-shadow: 20px 20px 70px 0px rgba(7, 3, 14, 0.15);
+
+    // Calendar
+    --calendar-bg: linear-gradient(120deg, rgba(102, 110, 181, 0.11) -5.73%, rgba(77, 80, 114, 0.15) 88.24%);
+    --calendar-form-bg: #1a1e3e;
+    --calendar-line: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+    
+    // Form
+    --form-color: url(/src/assets/form.webp) no-repeat;
+    --form-colorTablet: url(/src/assets/HearTablet.webp) no-repeat;
+    --hero-header-color: #fff;
+    --hero-text-color: #81809F;
+    --form-text: rgba(255, 255, 255, 0.70);
+    --form-input: rgba(255, 255, 255, 0.05);
+    --form-bg-color: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(84, 86, 114, 0.05) 100%);
+    --form-button-color: #FFF;
+    // About Page 
+    --our-mission: #C479FF;
+    --about-h3: #C6B5F1;
+    --about-p: rgba(171, 168, 201, 0.75);
+    --about-smartest: #C4BBDF;
+
+    // Blog page
+    --blog-MainDate: rgba(255, 255, 255, 0.67);
+    --blog-date: rgba(12, 17, 43, 0.40);
+    --blog-btn: #9B6EC9;
+
+    // ToS page
+    --tos-text: rgba(171, 168, 201, 0.75);
+
+
+    // Анимации rgba(230, 227, 251, 1)
+    --hovered-color: #FFF;
+    --menu-hovered-color: rgba(230, 227, 251, 1);
 }

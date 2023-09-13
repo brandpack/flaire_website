@@ -12,6 +12,8 @@ import { ReactComponent as Product } from '../../assets/Product.svg';
 import { ReactComponent as Project } from '../../assets/Project.svg';
 import { ReactComponent as Reporting } from '../../assets/Reporting.svg';
 import { ReactComponent as Sales } from '../../assets/Sale.svg';
+import { useTheme } from '../ThemeChanger/lib/UseTheme';
+import { Theme } from '../ThemeChanger/lib/ThemeContext';
 
 interface MenuProps {
     className?: string;
@@ -89,6 +91,8 @@ const HeaderLinks = [
 
 export const Menu: FC<MenuProps> = ({ className, burger, burgerFn }) => {
     // State to handle dropdown visibility
+    const { theme } = useTheme();
+
     const [showDropdown, setShowDropdown] = useState<number | null>(null);
 
     // Click event handler for toggling dropdown visibility (mobile)
@@ -129,9 +133,17 @@ export const Menu: FC<MenuProps> = ({ className, burger, burgerFn }) => {
                                 className={classNames(cls.MenuLink, { [cls.Mobile]: true }, [])}
                                 style={{ cursor: isMobile ? 'pointer' : 'default', display: 'flex', gap: '6px', flexDirection: 'row' }}
                             >
-                                {l.text}<svg style={{alignSelf: 'center'}} width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 6.06494L7 11.0649L12 6.06494" stroke="#E6E3FB" strokeOpacity="0.7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
+                                {l.text}
+                                {theme === Theme.DARK ?
+                                    <svg style={{ alignSelf: 'center' }} width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 6.06494L7 11.0649L12 6.06494" stroke="#E6E3FBB2" strokeOpacity="0.7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                    :
+                                    <svg style={{ alignSelf: 'center' }} width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 6.06494L7 11.0649L12 6.06494" stroke="#0A0819B2" strokeOpacity="0.7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                }
+
                             </div>
                         ) : (
                             <AppLink
@@ -150,7 +162,7 @@ export const Menu: FC<MenuProps> = ({ className, burger, burgerFn }) => {
                         {hasDropdown && (
                             <div
                                 onMouseLeave={() => (!isMobile ? handleMouseLeave() : undefined)} // Hide on mouse leave for desktop
-                                className={classNames(cls.DropdownContent, { [cls.Open]: isDropdownVisible && !isMobile,[cls.OpenM]: isDropdownVisible && isMobile }, [])} // Show on hover for desktop
+                                className={classNames(cls.DropdownContent, { [cls.Open]: isDropdownVisible && !isMobile, [cls.OpenM]: isDropdownVisible && isMobile }, [])} // Show on hover for desktop
                             >
                                 {l.dropdownItems.map((item, index) => (
                                     <div

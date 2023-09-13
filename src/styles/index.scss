@@ -10,21 +10,6 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
-::-webkit-scrollbar {
-  width: 3px;
-  background: var(--bg);
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 3px;
-  background-color: #4b4b4b5d;
-}
-
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
-  border-radius: 10px;
-  background: var(--bg);
-}
 
 .app {
   font: var(--font-m);
@@ -32,6 +17,7 @@ body {
   color: var(--primary-color);
   min-height: 100%;
   display: flex;
+  width: 100vw;
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -113,7 +99,7 @@ body {
   right: 0;
   top: 726px;
   width: 100vw;
-  background: linear-gradient(360deg, #141739 0%, rgba(20, 23, 57, 0.00) 100%), linear-gradient(360deg, #141739 0%, rgba(20, 23, 57, 0.00) 100%), linear-gradient(360deg, #141739 0%, rgba(20, 23, 57, 0.00) 100%), linear-gradient(360deg, #141739 0%, rgba(20, 23, 57, 0.00) 100%), linear-gradient(360deg, #141739 0%, rgba(20, 23, 57, 0.00) 100%), linear-gradient(360deg, #141739 0%, rgba(20, 23, 57, 0.00) 100%), linear-gradient(360deg, #141739 0%, rgba(20, 23, 57, 0.00) 100%);
+  background: var(--card-bg-color);
   // outline: 1px solid red;
 }
 

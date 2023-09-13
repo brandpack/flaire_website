@@ -34,6 +34,10 @@ hr {
     width: 313px;
     position: relative;
 
+    svg {
+        stroke: var(--third-color);
+    }
+
     &:nth-child(-n + 4) {
         &::after {
             content: "";
@@ -79,6 +83,9 @@ hr {
     display: flex;
     gap: 15px;
     flex-direction: column;
+    h4 {
+        color: var(--third-color);
+    }
 
     p {
         width: 100%;
@@ -87,7 +94,7 @@ hr {
         line-height: 130%;
         font-size: 18px;
         width: 313px;
-        color: rgba(147, 145, 177, 0.50);
+        color: var(--card-text-color);
     }
 }
 
