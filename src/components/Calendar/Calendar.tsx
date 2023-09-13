@@ -48,7 +48,7 @@ export const Calendar: FC<CalendarProps> = ({ className }) => {
                         :
                         <InlineWidget
                             // eslint-disable-next-line max-len
-                            url="https://calendly.com/reenasudan/intro-call?hide_event_type_details=1&hide_gdpr_banner=1&background_color=E7E7F4&text_color=0A0819&primary_color=C6E04C"
+                            url="https://calendly.com/reenasudan/intro-call?hide_event_type_details=1&hide_gdpr_banner=1&background_color=E7E7F4&text_color=0A0819&primary_color=6A6A8F"
                             styles={{ minHeight: '100%', minWidth: '320px', borderRadius: '0px 30px 30px 0px' }}
                         />
                     }
